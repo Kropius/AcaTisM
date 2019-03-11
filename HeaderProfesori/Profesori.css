@@ -1,0 +1,139 @@
+header
+{
+    position: sticky;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: 3% 15% 7% 60% 15%;
+    grid-template-rows: 60px;
+    justify-content: space-around;
+    background-color: #1c2541;
+    box-shadow: 0px 2px 4px 0px #470000;
+}
+
+header .titleLogo
+{
+    grid-column-start: 2;
+    grid-column-end: 4;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+header #title
+{
+    color: #00bda4; 
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-size: 30px; 
+    font-weight: normal; 
+    line-height: 58px; 
+    margin-bottom: 5px; 
+    text-align: center; 
+    text-shadow: 6px 6px 6px #7a0000;
+}
+
+header #logo
+{
+    width: 40px;
+    height: 40px;
+    margin-top: 9px;
+    box-shadow: 4px 4px 6px #7a0000;
+    border-radius: 40%
+}
+
+header .vertical
+{
+    height: 60px;
+    border-right: 10px solid #00bda4;
+    box-shadow: 15px 0px 6px #7a0000;
+    position: relative;
+    right: 20px;
+}
+
+header .searchBar
+{
+    margin-top: 19px;
+    grid-column-start: 4;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+header .searchBar .searchPhoto
+{
+    width: 20px;
+    height: 20px;
+    position: relative;
+    right: 20px;
+    bottom: 1px;
+}
+
+header .searchBar .textSearch
+{
+    height: 13px;
+}
+
+header .userMenu
+{
+    grid-column-start: 5;
+    display: flex;
+    flex-direction: row;
+    margin-top: 19px;
+}
+
+header .userMenu .userName
+{
+    color: #00bda4
+}
+
+header .userMenu .arrow .hoverbtn
+{
+    color: #b40000;
+    font-size: 25px; 
+    line-height: 15px; 
+    transform: rotate(180deg);
+    border: none;
+}
+
+header .userMenu .arrow
+{
+    position: relative;
+    left: 5px;
+} 
+
+header .userMenu .arrow .hoverContent {
+    display: none;
+    position: absolute;
+    right: -65px;
+    top: 30px;
+    background-color: #f1f1f1;
+    min-width: 140px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+header .userMenu .arrow .hoverContent a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}  
+
+header .userMenu .arrow .hoverContent a:hover {background-color: #ddd;}
+
+header .userMenu .arrow:hover .hoverContent {display: block;}
+
+header .userMenu .arrow:hover .hoverbtn {color: grey;}
+
+body
+{
+    margin: 0px;
+    background-color: white;
+}
+
+body>div
+{
+    display:grid;
+    grid-template-rows: 1000px 1000px;
+}
