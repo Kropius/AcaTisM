@@ -2,14 +2,17 @@ body{
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    background: #34495e;
+    background-image: url(background.jpg);
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .login_box h1{
     color: white;
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 2.5vw;
+    font-size: 2vw;
+    box-sizing: border-box;
 }
 
 .login_box{
@@ -19,12 +22,13 @@ body{
     top: 50%;
     left: 20%;
     transform: translate(-50%,-50%);
-    background: #191919;
+    background: #242038;
+    opacity: 0.7;
     text-align: center;
 }
 
 .login_box input{
-    font-size: 1vw;
+    font-size: 1.5vw;
     text-align: center;
 }
 
@@ -32,7 +36,7 @@ body{
     margin: 10% auto;
     border: 2px solid #3498db;
     background: none;
-    display: block;
+    display: grid;
     padding: 5% 10%;
     width: 60%;
     color: white;
@@ -63,6 +67,86 @@ body{
     background: #2ecc71;
 }
 
+
+.about_box{
+    display: grid;
+    width: 20%;
+    padding: 3% 3% 3% 3%;
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%,-50%);
+    background:#242038;
+    opacity: 0.7;
+}
+
+.about_box h1{ 
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2vw;
+    text-align: center;
+}
+
+.about_box p{
+    color:white;
+    font-size: 1.5vw;
+    text-align: left;
+}
+
+@media only screen and (max-width:1024px){
+    /* tablet: */
+    .login_box{
+        width: 50%;
+        padding: 3% 3% 3% 3%;
+        position: absolute;
+        top: 50%;
+        left: 30%;
+        transform: translate(-50%,-50%);
+        background: #191919;
+        text-align: center;
+    }
+
+    .login_box h1{
+        color: white;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 3vw;
+    }
+
+    .login_box input{
+        font-size: 3vw;
+        text-align: center;
+    }
+
+    .about_box{
+        display: grid;
+        width: 20%;
+        padding: 3% 3% 3% 3%;
+        position: absolute;
+        top: 50%;
+        left: 80%;
+        transform: translate(-50%,-50%);
+        background:#242038;
+        opacity: 0.7;
+    }
+    
+    .about_box h1{ 
+        color: white;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 4vw;
+        text-align: center;
+    }
+    
+    .about_box p{
+        color:white;
+        font-size: 3vw;
+        text-align: left;
+    }
+}
+
+
 @media only screen and (max-width:800px){
     /* tablet: */
     .login_box{
@@ -87,7 +171,34 @@ body{
         font-size: 3vw;
         text-align: center;
     }
-}
+
+    .about_box{
+        display: grid;
+        width: 20%;
+        padding: 3% 3% 3% 3%;
+        position: absolute;
+        top: 50%;
+        left: 80%;
+        transform: translate(-50%,-50%);
+        background:#242038;
+        opacity: 0.7;
+    }
+    
+    .about_box h1{ 
+        color: white;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 4vw;
+        text-align: center;
+    }
+    
+    .about_box p{
+        color:white;
+        font-size: 3vw;
+        text-align: left;
+    }
+} 
+
 
 @media only screen and (max-width:500px) {
     /* phone: */
@@ -114,4 +225,29 @@ body{
         text-align: center;
     }
 
-  }
+    .about_box{
+        display: grid;
+        width: 20%;
+        padding: 3% 3% 3% 3%;
+        position: absolute;
+        top: 50%;
+        left: 80%;
+        transform: translate(-50%,-50%);
+        background:#242038;
+        opacity: 0.7;
+    }
+    
+    .about_box h1{ 
+        color: white;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 5vw;
+        text-align: center;
+    }
+    
+    .about_box p{
+        color:white;
+        font-size: 4vw;
+        text-align: left;
+    }
+}
