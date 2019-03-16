@@ -349,8 +349,9 @@ body>main
     display: grid;
     grid-template-rows: 100%;
     grid-template-columns: 20% 60% 20%;
-    height: 70vw;
+    height: 69vw;
     background-image: url("back-img.jpg");
+    background-size: auto;
 }
 
 body>main .mainBody
@@ -476,7 +477,7 @@ body>main .students .message
     {
         display: grid;
         grid-template-rows: 100%;
-        grid-template-columns: 20% 60% 20%;
+        grid-template-columns: 10% 80% 10%;
         height: 120vw;
         background-image: url("back-img.jpg");
     }
@@ -498,7 +499,7 @@ body>main .students .message
         color: black; 
         font-family: Impact, Charcoal, sans-serif;
         font-weight: normal;
-        font-size: 3vw;
+        font-size: 5vw;
         text-shadow: 2px 2px 2px yellow;
     }
     body>main .students .message
@@ -509,7 +510,7 @@ body>main .students .message
         color: rgb(131, 15, 21); 
         font-family: Impact, Charcoal, sans-serif;
         font-weight: normal;
-        font-size: 3vw;  
+        font-size: 5vw;  
         text-shadow: 2px 2px 2px rgb(255, 123, 0);
     }
     body>main .projects
@@ -529,8 +530,8 @@ body>main .students .message
     {
         display: grid;
         grid-template-rows: 100%;
-        grid-template-columns: 20% 60% 20%;
-        height: 130vw;
+        grid-template-columns: 10% 80% 10%;
+        height: 170vw;
         background-image: url("back-img.jpg");
     }
     body>main .mainBody
@@ -551,7 +552,7 @@ body>main .students .message
         color: black; 
         font-family: Impact, Charcoal, sans-serif;
         font-weight: normal;
-        font-size: 3vw;
+        font-size: 6vw;
         text-shadow: 2px 2px 2px yellow;
     }
     body>main .students .message
@@ -562,7 +563,7 @@ body>main .students .message
         color: rgb(131, 15, 21); 
         font-family: Impact, Charcoal, sans-serif;
         font-weight: normal;
-        font-size: 3vw;  
+        font-size: 6vw;  
         text-shadow: 2px 2px 2px rgb(255, 123, 0);
     }
     body>main .projects
@@ -572,7 +573,7 @@ body>main .students .message
         bottom: 2%;
         text-align: center;
         grid-row: 1/2; 
-        margin-top:10vh;
+        margin-top:6vh;
     }
 }
 
@@ -582,8 +583,8 @@ body>main .students .message
     {
         display: grid;
         grid-template-rows: 100%;
-        grid-template-columns: 20% 60% 20%;
-        height: 160vw;
+        grid-template-columns: 10% 80% 10%;
+        height: 200vw;
         background-image: url("back-img.jpg");
     }
     body>main .projects
