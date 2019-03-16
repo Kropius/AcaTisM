@@ -530,7 +530,7 @@ body>main .students .message
         display: grid;
         grid-template-rows: 100%;
         grid-template-columns: 20% 60% 20%;
-        height: 170vw;
+        height: 130vw;
         background-image: url("back-img.jpg");
     }
     body>main .mainBody
@@ -583,7 +583,7 @@ body>main .students .message
         display: grid;
         grid-template-rows: 100%;
         grid-template-columns: 20% 60% 20%;
-        height: 200vw;
+        height: 160vw;
         background-image: url("back-img.jpg");
     }
     body>main .projects
