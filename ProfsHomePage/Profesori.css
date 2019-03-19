@@ -349,14 +349,14 @@ body>main
     display: grid;
     grid-template-rows: 100%;
     grid-template-columns: 20% 60% 20%;
-    height: 69vw;
+    height: 72vw;
     background-image: url("back-img.jpg");
     background-size: auto;
 }
 
 body>main .mainBody
 {
-    height: 65vw;
+    height: 58vw;
     grid-column: 2;
     background: rgba(28, 37, 65, 0.8);
     display: grid;
@@ -367,18 +367,18 @@ body>main .mainBody
 
 body>main .projects
 {
-    max-width: 90%;
+    /*max-width: 70%;*/
     position: relative;
-    bottom: 2%;
-    text-align: center;
+    bottom: 15%;
     grid-row: 1/2; 
 }
 
 body>main .projects img
 {
     width: 100%;
-    transform: scale(0.8, 0.8);
+    transform: scale(0.6, 0.6);
     opacity: 0.5;
+    text-align: center;
     filter: alpha(opacity = 50);
     border: 5px solid black;
     border-radius: 20%;
@@ -397,8 +397,8 @@ body>main .projects .message:hover
 body>main .projects .message
 {
     position: absolute;
-    top: 43%;
-    left: 18%;
+    top: 45%;
+    left: 25%;
     color: black; 
     font-family: Impact, Charcoal, sans-serif;
     font-weight: normal;
@@ -406,20 +406,23 @@ body>main .projects .message
     text-shadow: 2px 2px 2px yellow;
 }
 
+a{
+    text-decoration: none;
+}
+
 body>main .students 
 {
-    max-width: 90%;
     position : relative;
-    bottom: 5%;
-    text-align: center;
+    bottom: 40%;
     grid-row: 2/3;
 }
 
 body>main .students img
 {
     width: 100%;
-    transform: scale(0.8, 0.8);
+    transform: scale(0.6, 0.6);
     opacity: 0.5;
+    text-align: center;
     filter:alpha(opacity = 50);
     border: 5px solid black;
     border-radius: 20%;
@@ -439,7 +442,7 @@ body>main .students .message
 {
     position: absolute;
     top: 45%;
-    left: 18%;
+    left: 25%;
     color: rgb(131, 15, 21); 
     font-family: Impact, Charcoal, sans-serif;
     font-weight: normal;
@@ -495,7 +498,7 @@ body>main .students .message
     {   
         position: absolute;
         top: 37%;
-        left: 18%;
+        left: 25%;
         color: black; 
         font-family: Impact, Charcoal, sans-serif;
         font-weight: normal;
@@ -505,22 +508,13 @@ body>main .students .message
     body>main .students .message
     {
         position: absolute;
-        top: 33%;
-        left: 18%;
+        top: 37%;
+        left: 25%;
         color: rgb(131, 15, 21); 
         font-family: Impact, Charcoal, sans-serif;
         font-weight: normal;
         font-size: 5vw;  
         text-shadow: 2px 2px 2px rgb(255, 123, 0);
-    }
-    body>main .projects
-    {
-        max-width: 90%;
-        position: relative;
-        bottom: 2%;
-        text-align: center;
-        grid-row: 1/2; 
-        margin-top: 7vh;
     }
 }
 
@@ -548,7 +542,7 @@ body>main .students .message
     {
         position: absolute;
         top: 36%;
-        left: 18%;
+        left: 25%;
         color: black; 
         font-family: Impact, Charcoal, sans-serif;
         font-weight: normal;
@@ -558,22 +552,13 @@ body>main .students .message
     body>main .students .message
     {
         position: absolute;
-        top: 29%;
-        left: 18%;
+        top: 36%;
+        left: 25%;
         color: rgb(131, 15, 21); 
         font-family: Impact, Charcoal, sans-serif;
         font-weight: normal;
         font-size: 6vw;  
         text-shadow: 2px 2px 2px rgb(255, 123, 0);
-    }
-    body>main .projects
-    {
-        max-width: 90%;
-        position: relative;
-        bottom: 2%;
-        text-align: center;
-        grid-row: 1/2; 
-        margin-top:6vh;
     }
 }
 
@@ -586,14 +571,5 @@ body>main .students .message
         grid-template-columns: 10% 80% 10%;
         height: 200vw;
         background-image: url("back-img.jpg");
-    }
-    body>main .projects
-    {
-        max-width: 90%;
-        position: relative;
-        bottom: 2%;
-        text-align: center;
-        grid-row: 1/2; 
-        margin-top: 5vh;
     }
 }
