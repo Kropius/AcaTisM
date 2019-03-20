@@ -138,6 +138,60 @@ header .userMenu .arrow:hover .hoverContent {display: block;}
 
 header .userMenu .arrow:hover .hoverbtn {color:#b5a2be;}
 
+
+/*main*/
+
+main{
+    margin-top: 2.5vw;
+    margin-left:25%;
+    margin-right:25%;
+    margin-bottom:auto;
+    text-align: center;
+}
+
+.menu #head{
+    background-color: rgba(60, 52, 168, 0.8)
+}
+.menu #head, main article .titleN{
+    font-size: 170%;
+    text-shadow: 0.2vw 0.1vw 0.1vw #b5c1df;
+}
+.menu #head
+{
+    border-radius:1vw 1vw;
+}
+
+main a{
+    color: black;
+}
+
+main li{
+    text-align: left;
+}
+main article {
+	background-color: rgba(79, 137, 177, 0.8);
+	padding-left: 2vw;
+	padding-right: 2vw;
+	padding-top: 1vw;
+    padding-bottom: 1vw;
+    margin-bottom: 1vw;
+    border-radius:4vw 1vw;
+    transition: 0.5s;	
+    border-bottom-style: double;
+    border-right-style: double;
+}
+main article p{
+    text-align: justify;
+	text-justify: inter-word;
+}
+
+main .menu article:hover{
+    transform: scale(1.025);
+    border-style: double;
+    border-radius:1vw 1vw;
+}
+
+
 @media only screen and (max-width:800px)
 {   
     header 
@@ -207,6 +261,22 @@ header .userMenu .arrow
     margin-left: 0.3vw;
     top:-0.25vw;
 } 
+
+main{
+    margin-top: 2.5vw;
+    margin-left:15%;
+    margin-right:15%;
+    margin-bottom:auto;
+    text-align: center;
+}
+.menu #head, main article .titleN{
+    font-size: 120%;
+    text-shadow: 0.2vw 0.1vw 0.1vw #b5c1df;
+}
+main .menu article:hover{
+    transform: none;
+    border-radius:1vw 1vw;
+}
     
 }
 
@@ -285,175 +355,5 @@ header .userMenu .arrow
         top:0.3vw;
         right: 30vw;
     }
-    
-}
-
-/*main*/
-
-main{
-    margin-top: 5vw;
-    margin-left:15%;
-    margin-right:15%;
-    margin-bottom:5vw;
-}
-main .menu {
-    text-align: center;
-    align-content: center;
-    justify-content: space-evenly;
-    position: relative;
-    display:grid;
-    grid-auto-columns: auto auto;
-    grid-auto-rows: auto auto auto;
-    grid-gap: 6vw 6vw; 
-    font-size:1vw;
-    transition: 0.5s;
-}
-
-.menu div{
-    margin: auto 2vw auto 2vw;
-    padding-left: 1vw;
-    padding-right:1vw;
-    text-shadow: 0.2vw 0.1vw 0.1vw #ac9cb4;
-    border-bottom-style: double;
-    border-width:0.25vw;
-    transition: 0.5s;
-}
-
-.menu div:nth-of-type(2n+1){
-    background-color:rgba(168, 88, 233, 0.6);
-    border-radius:1vw 3vw;
-    border-left-style: double;  
-}
-
-main .menu :nth-child(2n){
-    background-color:rgba(106, 49, 211, 0.6) ;
-    border-radius:3vw 1vw;
-    border-right-style: double;
-}
-
-main .menu a{
-    color:black;
-    text-decoration: none;
-}
-
-main .menu #projects{
-    align-items: center;
-    grid-column-start:1;
-    grid-column-end: 2;
-    grid-row-start:1;
-    grid-row-end: 2;
-
-}
-main .menu #professors{
-    align-items: center;
-    grid-column-start:2;
-    grid-row-start:1;
-    grid-row-end: 2;
-
-}
-main .menu #news{
-    align-items: center;
-    grid-column-start:1;
-    grid-column-end: 2;
-    grid-row-start:2;
-    grid-row-end: 3;
-}
-
-main .menu #tips{
-    align-items: center;
-    grid-column-start:2;
-    grid-row-start:2;
-    grid-row-end: 3;
-}
-main .menu #newProjects{
-    grid-column-start:1;
-    grid-column-end: 2;
-    grid-row-start:3;
-}
-
-main .menu #apps{
-    grid-column-start:2;
-    grid-row-start:3;
-}
-
-main .menu div:hover{
-    block-size: 5vw;
-    padding: 0vw 1vw 0vw 1vw;
-    border-style: dashed;
-    border-color: rgb(0, 0, 0);
-    border-width: 0.2vw;
-    border-radius:1vw 1vw;
-    transform: scale(1.2);
-}
-
-main .menu div:nth-of-type(2n+1):hover{
-    background-color: rgba(120, 12, 209, 0.6);
- 
-}
-main .menu :nth-child(2n):hover{
-    background-color: rgba(26, 68, 206, 0.6);
-}
-
-@media only screen and (max-width:600px)
-{   
- 
-    main .menu {
-        text-align: top;
-        align-items: top;
-        justify-content: space-evenly;
-        position: relative;
-        display:grid;
-        margin-top: 20%;
-        margin-bottom: 50%;
-        grid-auto-columns: auto;
-        grid-auto-rows: repeat(6,1fr);
-        grid-gap: 6vw 6vw; 
-        font-size:3vw;
-        transition: 0.5s;
-    }
-
-    main .menu #projects{
-       align-items: top;
-        grid-column:1;
-        grid-row:1;
-    }
-    main .menu #professors{
-        align-items: center;
-        grid-column: 1;
-        grid-row:2;
-    }
-    main .menu #news{
-        align-items: center;
-        grid-column: 1;
-        grid-row:3;
-    }
-    
-    main .menu #tips{
-        align-items: center;
-        grid-column: 1;
-        grid-row:4;
-    }
-    main .menu #newProjects{
-        align-items: center;
-        grid-column: 1;
-        grid-row:5;
-    }
-    
-    main .menu #apps{ 
-        align-items: center;  
-        grid-column: 1;
-        grid-row:6;
-    }
-
-    main .menu div:hover{
-        block-size: 5vw;
-        border-style: dashed;
-        border-color: rgb(0, 0, 0);
-        border-width: 0.2vw;
-        border-radius:1vw 1vw;
-        height:15vw;   
-        transform: none;
-    }
-    
     
 }
