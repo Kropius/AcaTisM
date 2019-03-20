@@ -1,14 +1,142 @@
 
-body { 
-    background-image: url("casey-horner-339855-unsplash.png");
-    background-size: 100% 100%;
-    position: relative;
-    background-position: top;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    margin-bottom:auto;
+body
+{
+    margin: 0%;
 }
 
+header 
+{
+    position: sticky;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: 3% 15% 7% 55% 20%;
+    height: 8.5vh;
+    justify-content: space-around;
+    background-image: linear-gradient(#2a1368, #0d1731);
+    box-shadow: 0px 2px 4px 0px #470000;
+}
+
+header .titleLogo
+{
+    grid-column-start: 2;
+    grid-column-end: 4;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+header #title
+{
+    color: #00bda4; 
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-size: 2vw; 
+    font-weight: normal; 
+    line-height: 8vh; 
+    margin-bottom: 3vh; 
+    text-align: center; 
+    text-shadow: 6px 6px 6px #7a0000;
+}
+
+header #logo
+{
+    width: 2.3vw;
+    height: 5vh;
+    margin-top: 1.7vh;
+    box-shadow: 4px 4px 6px #7a0000;
+    border-radius: 40%
+}
+
+header .vertical
+{
+    height: 8.7vh;
+    border-right: 0.7vw solid #00bda4;
+    box-shadow: 0.9vw 0px 6px #7a0000;
+    position: relative;
+    right: 1vw;
+}
+
+header .searchBar
+{
+    width: 15vw;
+    margin-top: 3vh;
+    grid-column-start: 4;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+header .searchBar .searchPhoto
+{
+    width: 10%;
+    height: 3vh;
+    position: relative;
+    right: 1.4vw;
+    bottom: 0.1vh;
+}
+
+header .searchBar .textSearch
+{
+    width: 100%;
+    height: 2vh;
+}
+
+header .userMenu
+{
+    grid-column-start: 5;
+    display: flex;
+    flex-direction: row;
+    margin-top: 2.7vh;
+}
+
+header .userMenu .userName
+{
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-size: 1vw; 
+    color: #00bda4
+}
+
+header .userMenu .arrow .hoverbtn
+{
+    color: #b40000;
+    font-size: 3vh; 
+    line-height: 2.5vh; 
+    transform: rotate(180deg);
+}
+
+header .userMenu .arrow
+{
+    position: relative;
+    left: 0.3vw;
+} 
+
+header .userMenu .arrow .hoverContent {
+    display: none;
+    position: absolute;
+    right: -4.3vw;
+    top: 3vh;
+    background-color: #f1f1f1;
+    min-width: 9vw;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+header .userMenu .arrow .hoverContent a {
+    color: black;
+    padding: 1vw 1.5vw;
+    text-decoration: none;
+    display: block;
+}  
+
+header .userMenu .arrow .hoverContent a:hover {background-color: #ddd;}
+
+header .userMenu .arrow:hover .hoverContent {display: block;}
+
+header .userMenu .arrow:hover .hoverbtn {color: grey;}
+
+@media only screen and (max-width:1200px)
+{
     header 
     {
         position: sticky;
@@ -16,339 +144,206 @@ body {
         top: 0;
         left: 0;
         display: grid;
-        grid-template-columns: 3% 15% 7% 55% 20%;
+        grid-template-columns: 3% 25% 7% 35% 30%;
         height: 8.5vh;
         justify-content: space-around;
         background-image: linear-gradient(#2a1368, #0d1731);
         box-shadow: 0px 2px 4px 0px #470000;
     }
-    
-    header .titleLogo
-    {
-        grid-column-start: 2;
-        grid-column-end: 4;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-    }
-    
+
     header #title
     {
         color: #00bda4; 
         font-family: 'Comic Sans MS', cursive, sans-serif;
-        font-size: 2vw; 
+        font-size: 3vw; 
         font-weight: normal; 
         line-height: 8vh; 
         margin-bottom: 3vh; 
         text-align: center; 
         text-shadow: 6px 6px 6px #7a0000;
     }
-    
+
     header #logo
     {
-        width: 2.3vw;
+        width: 3vw;
         height: 5vh;
         margin-top: 1.7vh;
         box-shadow: 4px 4px 6px #7a0000;
         border-radius: 40%
     }
-    
-    header .vertical
-    {
-        height: 8.7vh;
-        border-right: 0.7vw solid #00bda4;
-        box-shadow: 0.9vw 0px 6px #7a0000;
-        position: relative;
-        right: 1vw;
-    }
-    
+
     header .searchBar
     {
-        width: 15vw;
+        width: 16vw;
         margin-top: 3vh;
         grid-column-start: 4;
         display: flex;
         flex-direction: row-reverse;
         justify-content: flex-end;
     }
-    
+
     header .searchBar .searchPhoto
     {
-        width: 10%;
+        width: 15%;
         height: 3vh;
         position: relative;
-        right: 1.4vw;
+        right: 12%;
         bottom: 0.1vh;
     }
-    
-    header .searchBar .textSearch
-    {
-        width: 100%;
-        height: 2vh;
-    }
-    
-    header .userMenu
-    {
-        grid-column-start: 5;
-        display: flex;
-        flex-direction: row;
-        margin-top: 2.7vh;
-    }
-    
+
     header .userMenu .userName
-    {
+    {   
         font-family: 'Comic Sans MS', cursive, sans-serif;
-        font-size: 1vw; 
+        font-size: 1.3vw; 
         color: #00bda4
     }
-    
-    header .userMenu .arrow .hoverbtn
+}
+
+@media only screen and (max-width:750px)
+{
+    header 
     {
-        color: #b40000;
-        font-size: 3vh; 
-        line-height: 2.5vh; 
-        transform: rotate(180deg);
+        position: sticky;
+        z-index: 3;
+        top: 0;
+        left: 0;
+        display: grid;
+        grid-template-columns: 3% 25% 15% 30% 25%;
+        height: 8.5vh;
+        justify-content: space-around;
+        background-image: linear-gradient(#2a1368, #0d1731);
+        box-shadow: 0px 2px 4px 0px #470000;
     }
-    
-    header .userMenu .arrow
+
+    header #title
     {
+        color: #00bda4; 
+        font-family: 'Comic Sans MS', cursive, sans-serif;
+        font-size: 3.5vw; 
+        font-weight: normal; 
+        line-height: 8vh; 
+        margin-bottom: 3vh; 
+        text-align: center; 
+        text-shadow: 6px 6px 6px #7a0000;
+    }
+
+    header #logo
+    {
+        width: 4vw;
+        height: 5vh;
+        margin-top: 1.7vh;
+        box-shadow: 4px 4px 6px #7a0000;
+        border-radius: 40%
+    }
+
+    header .vertical
+    {
+        height: 8.7vh;
+        border-right: 0.9vw solid #00bda4;
+        box-shadow: 0.9vw 0px 6px #7a0000;
         position: relative;
-        left: 0.3vw;
-    } 
-    
-    header .userMenu .arrow .hoverContent {
-        display: none;
-        position: absolute;
-        right: -4.3vw;
-        top: 3vh;
-        background-color: #f1f1f1;
-        min-width: 9vw;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        z-index: 1;
-      }
-    
-    header .userMenu .arrow .hoverContent a {
-        color: black;
-        padding: 1vw 1.5vw;
-        text-decoration: none;
-        display: block;
-    }  
-    
-    header .userMenu .arrow .hoverContent a:hover {background-color: #ddd;}
-    
-    header .userMenu .arrow:hover .hoverContent {display: block;}
-    
-    header .userMenu .arrow:hover .hoverbtn {color: grey;}
-    
-    @media only screen and (max-width:1200px)
-    {
-        header 
-        {
-            position: sticky;
-            z-index: 3;
-            top: 0;
-            left: 0;
-            display: grid;
-            grid-template-columns: 3% 25% 7% 35% 30%;
-            height: 8.5vh;
-            justify-content: space-around;
-            background-image: linear-gradient(#35008b, #1c2541);
-            box-shadow: 0px 2px 4px 0px #470000;
-        }
-    
-        header #title
-        {
-            color: #00bda4; 
-            font-family: 'Comic Sans MS', cursive, sans-serif;
-            font-size: 3vw; 
-            font-weight: normal; 
-            line-height: 8vh; 
-            margin-bottom: 3vh; 
-            text-align: center; 
-            text-shadow: 6px 6px 6px #7a0000;
-        }
-    
-        header #logo
-        {
-            width: 3vw;
-            height: 5vh;
-            margin-top: 1.7vh;
-            box-shadow: 4px 4px 6px #7a0000;
-            border-radius: 40%
-        }
-    
-        header .searchBar
-        {
-            width: 16vw;
-            margin-top: 3vh;
-            grid-column-start: 4;
-            display: flex;
-            flex-direction: row-reverse;
-            justify-content: flex-end;
-        }
-    
-        header .searchBar .searchPhoto
-        {
-            width: 10%;
-            height: 3vh;
-            position: relative;
-            right: 15%;
-            bottom: 0.1vh;
-        }
-    
-        header .userMenu .userName
-        {   
-            font-family: 'Comic Sans MS', cursive, sans-serif;
-            font-size: 1.3vw; 
-            color: #00bda4
-        }
+        right: 1vw;
     }
-    
-    @media only screen and (max-width:750px)
+
+    header .searchBar
     {
-        header 
-        {
-            position: sticky;
-            z-index: 3;
-            top: 0;
-            left: 0;
-            display: grid;
-            grid-template-columns: 3% 25% 15% 30% 25%;
-            height: 8.5vh;
-            justify-content: space-around;
-            background-image: linear-gradient(#35008b, #1c2541);
-            box-shadow: 0px 2px 4px 0px #470000;
-        }
-    
-        header #title
-        {
-            color: #00bda4; 
-            font-family: 'Comic Sans MS', cursive, sans-serif;
-            font-size: 3.5vw; 
-            font-weight: normal; 
-            line-height: 8vh; 
-            margin-bottom: 3vh; 
-            text-align: center; 
-            text-shadow: 6px 6px 6px #7a0000;
-        }
-    
-        header #logo
-        {
-            width: 4vw;
-            height: 5vh;
-            margin-top: 1.7vh;
-            box-shadow: 4px 4px 6px #7a0000;
-            border-radius: 40%
-        }
-    
-        header .vertical
-        {
-            height: 8.7vh;
-            border-right: 0.9vw solid #00bda4;
-            box-shadow: 0.9vw 0px 6px #7a0000;
-            position: relative;
-            right: 1vw;
-        }
-    
-        header .searchBar
-        {
-            width: 22vw;
-            margin-top: 3vh;
-            grid-column-start: 4;
-            display: flex;
-            flex-direction: row-reverse;
-            justify-content: flex-end;
-        }
-    
-        header .searchBar .searchPhoto
-        {
-            width: 10%;
-            height: 3vh;
-            position: relative;
-            right: 18%;
-            bottom: 0.1vh;
-        }
-    
-        header .userMenu .userName
-        {   
-            font-family: 'Comic Sans MS', cursive, sans-serif;
-            font-size: 2vw; 
-            color: #00bda4
-        }
+        width: 22vw;
+        margin-top: 3vh;
+        grid-column-start: 4;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
     }
-    
-    @media only screen and (max-width:550px)
+
+    header .searchBar .searchPhoto
     {
-        header 
-        {
-            position: sticky;
-            z-index: 3;
-            top: 0;
-            left: 0;
-            display: grid;
-            grid-template-columns: 3% 20% 30% 27% 20%;
-            height: 8.5vh;
-            justify-content: space-around;
-            background-image: linear-gradient(#35008b, #1c2541);
-            box-shadow: 0px 2px 4px 0px #470000;
-        }
-    
-        header #title
-        {
-            color: #00bda4; 
-            font-family: 'Comic Sans MS', cursive, sans-serif;
-            font-size: 5vw; 
-            font-weight: normal; 
-            line-height: 8vh; 
-            margin-bottom: 3vh; 
-            text-align: center; 
-            text-shadow: 6px 6px 6px #7a0000;
-        }
-    
-        header #logo
-        {
-            width: 5.5vw;
-            height: 5vh;
-            margin-top: 1.7vh;
-            box-shadow: 4px 4px 6px #7a0000;
-            border-radius: 40%
-        }
-    
-        header .vertical
-        {
-            height: 8.7vh;
-            border-right: 0.9vw solid #00bda4;
-            box-shadow: 0.9vw 0px 6px #7a0000;
-            position: relative;
-            right: 1vw;
-        }
-    
-        header .searchBar
-        {
-            width: 22vw;
-            margin-top: 3vh;
-            grid-column-start: 4;
-            display: flex;
-            flex-direction: row-reverse;
-            justify-content: flex-end;
-        }
-    
-        header .searchBar .searchPhoto
-        {
-            width: 10%;
-            height: 3vh;
-            position: relative;
-            right: 21%;
-            bottom: 0.1vh;
-        }
-    
-        header .userMenu .userName
-        {   
-            font-family: 'Comic Sans MS', cursive, sans-serif;
-            font-size: 3vw; 
-            color: #00bda4
-        }
+        width: 17%;
+        height: 3vh;
+        position: relative;
+        right: 15%;
+        bottom: 0.1vh;
     }
+
+    header .userMenu .userName
+    {   
+        font-family: 'Comic Sans MS', cursive, sans-serif;
+        font-size: 2vw; 
+        color: #00bda4
+    }
+}
+
+@media only screen and (max-width:550px)
+{
+    header 
+    {
+        position: sticky;
+        z-index: 3;
+        top: 0;
+        left: 0;
+        display: grid;
+        grid-template-columns: 3% 20% 30% 27% 20%;
+        height: 8.5vh;
+        justify-content: space-around;
+        background-image: linear-gradient(#2a1368, #0d1731);
+        box-shadow: 0px 2px 4px 0px #470000;
+    }
+
+    header #title
+    {
+        color: #00bda4; 
+        font-family: 'Comic Sans MS', cursive, sans-serif;
+        font-size: 5vw; 
+        font-weight: normal; 
+        line-height: 8vh; 
+        margin-bottom: 3vh; 
+        text-align: center; 
+        text-shadow: 6px 6px 6px #7a0000;
+    }
+
+    header #logo
+    {
+        width: 5.5vw;
+        height: 5vh;
+        margin-top: 1.7vh;
+        box-shadow: 4px 4px 6px #7a0000;
+        border-radius: 40%
+    }
+
+    header .vertical
+    {
+        height: 8.7vh;
+        border-right: 0.9vw solid #00bda4;
+        box-shadow: 0.9vw 0px 6px #7a0000;
+        position: relative;
+        right: 1vw;
+    }
+
+    header .searchBar
+    {
+        width: 22vw;
+        margin-top: 3vh;
+        grid-column-start: 4;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+    }
+
+    header .searchBar .searchPhoto
+    {
+        width: 20%;
+        height: 3vh;
+        position: relative;
+        right: 18%;
+        bottom: 0.1vh;
+    }
+
+    header .userMenu .userName
+    {   
+        font-family: 'Comic Sans MS', cursive, sans-serif;
+        font-size: 3vw; 
+        color: #00bda4
+    }
+}
     
 body
 {
