@@ -27,6 +27,7 @@ body{
     text-align: center;
 }
 
+
 .login_box input{
     font-size: 1.5vw;
     text-align: center;
@@ -50,23 +51,44 @@ body{
     border-color: #2ecc71;
     transition: 0.5s;
 }
-.login_box input[type="submit"]{
-    margin: 10% auto;
-    border: 2px solid #2ecc71;
-    background: none;
-    display: block;
-    padding: 5% 5%;
-    width: 50%;
-    color: white;
-    outline: none;
-    border-radius: 25px;
-    transition: 1s;
+
+.login_box .buttons{
+    display: grid;
+    grid-template-columns: 8vw 8vw;
+    grid-column-gap: 4vw;
+    grid-template-rows: 2vw;
+    grid-template-areas: 
+    "prof stud";
+    grid-column-gap: 5vw;
+    justify-content: center;
+    text-align: center;
 }
 
-.login_box input[type="submit"]:hover{
-    background: #2ecc71;
+.prof{
+    grid-area: prof;
+    background-color: #ff3838;
+    text-decoration: none;
+    font-size: 1.1vw;
+    border: none;
+    border: 0.1vw solid black;
+    border-radius: 0.5vw;
+    text-transform: uppercase;
 }
 
+.stud{
+    grid-area: stud;
+    background-color: #ff3838;
+    text-decoration: none;
+    font-size: 1.2vw;
+    border: none;
+    border: 0.1vw solid black;
+    border-radius: 0.5vw;
+    text-transform: uppercase;
+}
+
+.prof a, .stud a{
+    text-decoration: none;
+}
 
 .about_box{
     display: grid;
@@ -95,7 +117,7 @@ body{
 }
 
 @media only screen and (max-width:1024px){
-    /* tablet: */
+     /* tablet:  */
     .login_box{
         width: 50%;
         padding: 3% 3% 3% 3%;
@@ -144,7 +166,41 @@ body{
         font-size: 3vw;
         text-align: left;
     }
-}
+
+    .login_box .buttons{
+        display: grid;
+        grid-template-columns: 17vw 17vw;
+        grid-column-gap: 4vw;
+        grid-template-rows: 4vw;
+        grid-template-areas: 
+        "prof stud";
+        grid-column-gap: 5vw;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .prof{
+        grid-area: prof;
+        background-color: #ff3838;
+        text-decoration: none;
+        font-size: 2.5vw;
+        border: none;
+        border: 0.1vw solid black;
+        border-radius: 0.5vw;
+        text-transform: uppercase;
+    }
+    
+    .stud{
+        grid-area: stud;
+        background-color: #ff3838;
+        text-decoration: none;
+        font-size: 2.5vw;
+        border: none;
+        border: 0.1vw solid black;
+        border-radius: 0.5vw;
+        text-transform: uppercase;
+    }
+} 
 
 
 @media only screen and (max-width:800px){
@@ -196,6 +252,41 @@ body{
         color:white;
         font-size: 3vw;
         text-align: left;
+    }
+
+    .login_box .buttons{
+        display: grid;
+        grid-template-columns: 20vw;
+        grid-template-rows: 5vw 5vw;
+        grid-row-gap: 3vw;
+        grid-template-areas: 
+        "prof" 
+        "stud";
+        grid-column-gap: 5vw;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .prof{
+        grid-area: prof;
+        background-color: #ff3838;
+        text-decoration: none;
+        font-size: 3vw;
+        border: none;
+        border: 0.1vw solid black;
+        border-radius: 0.5vw;
+        text-transform: uppercase;
+    }
+    
+    .stud{
+        grid-area: stud;
+        background-color: #ff3838;
+        text-decoration: none;
+        font-size: 3vw;
+        border: none;
+        border: 0.1vw solid black;
+        border-radius: 0.5vw;
+        text-transform: uppercase;
     }
 } 
 
