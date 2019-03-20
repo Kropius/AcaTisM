@@ -5,41 +5,24 @@
 }
 
 body{
-    background-image: url("../proiect/background-student.png");
+    /* background-image: url("../proiect/background-student.png"); */
     background-size: cover;
     background-attachment: fixed;
 }
 
 .container{
-    margin-top: 10vw;
+    margin-top: 5vw;
     display: grid;
     grid-template-columns:30vw 30vw;
     grid-column-gap: 5vw;
     grid-row-gap: 5vw;
     justify-content: center;
-    grid-template-rows: 13vw 13vw;
+    grid-template-rows: 15vw 15vw;
     grid-template-areas: 
     "cLanguage javaLanguage"
     "theory frontend";
+    font-size: 1.5vw;
     color: black;
-}
-
-.cLanguage{
-    grid-area: cLanguage; 
-    background: #74b9ff;
-    font-size: 1.5vw;
-    border: 0.2vw solid #a29bfe;
-    opacity: 0.95;
-    text-align: left;
-}
-
-.cLanguage:hover{
-    grid-area: cLanguage; 
-    background-color: #a29bfe;
-    opacity: 0.8;
-    transition: 1s;
-    font-size: 1.5vw;
-    border-radius: 5%;
 }
 
 .appBox{
@@ -50,15 +33,36 @@ body{
     text-align: center;
 }
 
+.cLanguage{
+    grid-area: cLanguage; 
+    background: #74b9ff;
+    border: 0.2vw solid #a29bfe;
+    opacity: 0.95;
+    text-align: left;
+}
+
+.cLanguage:hover{
+    grid-area: cLanguage; 
+    background-color: #a29bfe;
+    opacity: 0.8;
+    transition: 1s;
+    border-radius: 5%;
+}
+
 .vs, .clion, .intellij, .eclipse, .latex, .overleaf, .vscode, .brackets{
     width: 6vw;
     height: 6vw;
 }
 
+.vs:hover, .clion:hover, .intellij:hover, .eclipse:hover, .latex:hover, .overleaf:hover, .vscode:hover, .brackets:hover{
+    border-radius: 10px;
+    transform: rotate(10deg);
+    transition: 0.3s;
+}
+
 .javaLanguage{
     grid-area: javaLanguage;
     background: #74b9ff;
-    font-size: 1.5vw;
     border: 0.2vw solid #a29bfe;
     opacity: 0.95;
     text-align: left;
@@ -69,14 +73,12 @@ body{
     background-color: #a29bfe;
     opacity: 0.8;
     transition: 1s;
-    font-size: 1.5vw;
     border-radius: 5%;
 }
 
 .theory{
     grid-area: theory;
     background: #74b9ff;
-    font-size: 1.5vw;
     border: 0.2vw solid #a29bfe;
     opacity: 0.95;
     text-align: left;
@@ -87,14 +89,12 @@ body{
     background-color: #a29bfe;
     opacity: 0.8;
     transition: 1s;
-    font-size: 1.5vw;
     border-radius: 5%;
 }
 
 .frontend{
     grid-area: frontend;
     background: #74b9ff;
-    font-size: 1.5vw;
     border: 0.2vw solid #a29bfe;
     opacity: 0.95;
     text-align: left;
@@ -105,7 +105,6 @@ body{
     background-color: #a29bfe;
     opacity: 0.8;
     transition: 1s;
-    font-size: 1.5vw;
     border-radius: 5%;
 }
 
@@ -115,15 +114,66 @@ p{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-ul{
-    list-style-type: none;
-    padding-bottom: 1vw;
+@media only screen and (max-width:1050px){
+    .container{
+        margin-top: 3vw;
+        display: grid;
+        grid-template-columns:70vw; 
+        grid-row-gap: 10vw;
+        justify-content: center;
+        /* grid-template-rows: 50vw; */
+        grid-template-areas: 
+        "cLanguage" 
+        "javaLanguage"
+        "theory" 
+        "frontend";
+        color: black;
+        font-size: 2.5vw;
+    }
+
+    .appBox{
+        display: grid;
+        grid-template-columns: 20vw 20vw;
+        grid-template-rows: 10vw;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .vs, .clion, .intellij, .eclipse, .latex, .overleaf, .vscode, .brackets{
+        width: 7vw;
+        height: 7vw;
+    }
+
 }
 
-a:link{
-    text-decoration: none;
-}
+@media only screen and (max-width:550px){
 
-a:hover{
-    font-weight: bold;
+    .container{
+        margin-top: 5vw;
+        display: grid;
+        grid-template-columns:97vw; 
+        grid-row-gap: 10vw;
+        justify-content: center;
+        grid-template-areas: 
+        "cLanguage" 
+        "javaLanguage"
+        "theory" 
+        "frontend";
+        color: black;
+        font-size: 4vw;
+    }
+
+    .appBox{
+        display: grid;
+        grid-template-columns: 10vw 10vw;
+        grid-template-rows: 10vw;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .vs, .clion, .intellij, .eclipse, .latex, .overleaf, .vscode, .brackets{
+        width: 5vw;
+        height: 5vw;
+    }
+    
 }
