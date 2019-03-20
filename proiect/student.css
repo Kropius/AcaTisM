@@ -283,7 +283,7 @@ header .userMenu .arrow
         width: 1.3vw;
         height: 1.3vw; 
         top:0.3vw;
-        right: 30vw;
+        right: 30zvw;
     }
     
 }
@@ -337,7 +337,7 @@ main .menu a{
 }
 
 main .menu #projects{
-    align-items: center;
+
     grid-column-start:1;
     grid-column-end: 2;
     grid-row-start:1;
@@ -345,14 +345,14 @@ main .menu #projects{
 
 }
 main .menu #professors{
-    align-items: center;
+ 
     grid-column-start:2;
     grid-row-start:1;
     grid-row-end: 2;
 
 }
 main .menu #news{
-    align-items: center;
+
     grid-column-start:1;
     grid-column-end: 2;
     grid-row-start:2;
@@ -360,7 +360,7 @@ main .menu #news{
 }
 
 main .menu #tips{
-    align-items: center;
+   
     grid-column-start:2;
     grid-row-start:2;
     grid-row-end: 3;
@@ -396,10 +396,41 @@ main .menu :nth-child(2n):hover{
 
 @media only screen and (max-width:600px)
 {   
- 
+    header 
+    {
+    position: sticky;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: 7% 15% 7% 51% 20%;
+    height: 3.5vw;
+    justify-content: space-around;
+    background-image: linear-gradient( rgb(210, 197, 241), rgb(48, 22, 110));
+    box-shadow: 0em 0.3em 0.7em 0em #2b0047;
+    }
+
+    header .searchBar{
+        position:relative;
+        box-align: center;
+        margin-top: 0.8vw;
+        height:0.5vw;
+    }
+    header .searchBar input:nth-of-type(1){
+        width: 19vw;
+        height: 0.7vw;
+        position: absolute;
+        font-size:1vw;
+    }
+
+    header .searchBar input:nth-of-type(2){
+        position: absolute;
+        width: 1.3vw;
+        height: 1.3vw; 
+        top:0.2vw;
+        right: 31.3vw;
+    }
     main .menu {
-        text-align: top;
-        align-items: top;
         justify-content: space-evenly;
         position: relative;
         display:grid;
@@ -413,34 +444,28 @@ main .menu :nth-child(2n):hover{
     }
 
     main .menu #projects{
-       align-items: top;
         grid-column:1;
         grid-row:1;
     }
     main .menu #professors{
-        align-items: center;
         grid-column: 1;
         grid-row:2;
     }
     main .menu #news{
-        align-items: center;
         grid-column: 1;
         grid-row:3;
     }
     
     main .menu #tips{
-        align-items: center;
         grid-column: 1;
         grid-row:4;
     }
     main .menu #newProjects{
-        align-items: center;
         grid-column: 1;
         grid-row:5;
     }
     
-    main .menu #apps{ 
-        align-items: center;  
+    main .menu #apps{   
         grid-column: 1;
         grid-row:6;
     }

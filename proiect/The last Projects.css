@@ -138,6 +138,61 @@ header .userMenu .arrow:hover .hoverContent {display: block;}
 
 header .userMenu .arrow:hover .hoverbtn {color:#b5a2be;}
 
+
+/*main*/
+
+main{
+    margin-top: 2.5vw;
+    margin-left:25%;
+    margin-right:25%;
+    margin-bottom:auto;
+    text-align: center;
+}
+
+.menu #head{
+    background-color: rgba(118, 81, 148, 0.8)
+}
+.menu #head, main article .titleProj{
+    font-size: 170%;
+    text-shadow: 0.2vw 0.1vw 0.1vw #682888;
+}
+.menu #head
+{
+    border-radius:1vw 1vw;
+}
+
+article p:nth-of-type(2n+1)
+{
+    font-weight: bold
+}
+
+main abbr{
+    text-decoration: none;
+}
+main article {
+	background-color: rgba(185, 141, 221, 0.8);
+	padding-left: 2vw;
+	padding-right: 2vw;
+	padding-top: 1vw;
+    padding-bottom: 1vw;
+    margin-bottom: 1vw;
+    border-radius:4vw 1vw;
+    transition: 0.5s;	
+    border-bottom-style: double;
+    border-right-style: double;
+}
+main article p{
+    text-align: justify;
+	text-justify: inter-word;
+}
+
+main .menu article:hover{
+    transform: scale(1.025);
+    border-style: double;
+    border-radius:1vw 1vw;
+}
+
+
 @media only screen and (max-width:800px)
 {   
     header 
@@ -207,6 +262,22 @@ header .userMenu .arrow
     margin-left: 0.3vw;
     top:-0.25vw;
 } 
+
+main{
+    margin-top: 2.5vw;
+    margin-left:15%;
+    margin-right:15%;
+    margin-bottom:auto;
+    text-align: center;
+}
+.menu #head, main article .titleProj{
+    font-size: 120%;
+    text-shadow: 0.2vw 0.1vw 0.1vw #743e8f;
+}
+main .menu article:hover{
+    transform: none;
+    border-radius:1vw 1vw;
+}
     
 }
 
@@ -286,77 +357,4 @@ header .userMenu .arrow
         right: 30vw;
     }
     
-}
-
-/*main*/
-
-main{
-    margin-top: 2.5vw;
-    margin-left:25%;
-    margin-right:25%;
-    margin-bottom:auto;
-    text-align: center;
-}
-
-.menu #head{
-    background-color: rgba(118, 81, 148, 0.8)
-}
-.menu #head, main article .titleProj{
-    font-size: 170%;
-    text-shadow: 0.2vw 0.1vw 0.1vw #682888;
-}
-.menu #head
-{
-    border-radius:1vw 1vw;
-}
-
-article p:nth-of-type(2n+1)
-{
-    font-weight: bold
-}
-
-main abbr{
-    text-decoration: none;
-}
-main article {
-	background-color: rgba(185, 141, 221, 0.8);
-	padding-left: 2vw;
-	padding-right: 2vw;
-	padding-top: 1vw;
-    padding-bottom: 1vw;
-    margin-bottom: 1vw;
-    border-radius:4vw 1vw;
-    transition: 0.5s;	
-    border-bottom-style: double;
-    border-right-style: double;
-}
-main article p{
-    text-align: justify;
-	text-justify: inter-word;
-}
-
-main .menu article:hover{
-    transform: scale(1.025);
-    border-style: double;
-    border-radius:1vw 1vw;
-}
-
-@media only screen and (max-width:750px)
-{
-
-    main{
-        margin-top: 2.5vw;
-        margin-left:15%;
-        margin-right:15%;
-        margin-bottom:auto;
-        text-align: center;
-    }
-    .menu #head, main article .titleProj{
-        font-size: 120%;
-        text-shadow: 0.2vw 0.1vw 0.1vw #743e8f;
-    }
-    main .menu article:hover{
-        transform: none;
-        border-radius:1vw 1vw;
-    }
 }
