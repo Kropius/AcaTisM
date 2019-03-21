@@ -1,0 +1,344 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-image: url(background.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.login_box h1{
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2vw;
+    box-sizing: border-box;
+}
+
+.login_box{
+    width: 20%;
+    padding: 3% 3% 3% 3%;
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%,-50%);
+    background: #242038;
+    opacity: 0.7;
+    text-align: center;
+}
+
+
+.login_box input{
+    font-size: 1.5vw;
+    text-align: center;
+}
+
+.login_box input[type="text"], .login_box input[type="password"]{
+    margin: 10% auto;
+    border: 2px solid #3498db;
+    background: none;
+    display: grid;
+    padding: 5% 10%;
+    width: 60%;
+    color: white;
+    outline: none;
+    border-radius: 25px;
+    transition: 0.5s;
+}
+
+.login_box input[type="text"]:focus, .login_box input[type="password"]:focus{
+    width: 78%;
+    border-color: #2ecc71;
+    transition: 0.5s;
+}
+
+.login_box .buttons{
+    display: grid;
+    grid-template-columns: 8vw 8vw;
+    grid-column-gap: 4vw;
+    grid-template-rows: 2vw;
+    grid-template-areas: 
+    "prof stud";
+    grid-column-gap: 5vw;
+    justify-content: center;
+    text-align: center;
+}
+
+.prof{
+    grid-area: prof;
+    background-color: #ff3838;
+    text-decoration: none;
+    font-size: 1.1vw;
+    border: none;
+    border: 0.1vw solid black;
+    border-radius: 0.5vw;
+    text-transform: uppercase;
+}
+
+.stud{
+    grid-area: stud;
+    background-color: #ff3838;
+    text-decoration: none;
+    font-size: 1.2vw;
+    border: none;
+    border: 0.1vw solid black;
+    border-radius: 0.5vw;
+    text-transform: uppercase;
+}
+
+.prof a, .stud a{
+    text-decoration: none;
+}
+
+.about_box{
+    display: grid;
+    width: 20%;
+    padding: 3% 3% 3% 3%;
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%,-50%);
+    background:#242038;
+    opacity: 0.7;
+}
+
+.about_box h1{ 
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2vw;
+    text-align: center;
+}
+
+.about_box p{
+    color:white;
+    font-size: 1.5vw;
+    text-align: left;
+}
+
+@media only screen and (max-width:1024px){
+     /* tablet:  */
+    .login_box{
+        width: 50%;
+        padding: 3% 3% 3% 3%;
+        position: absolute;
+        top: 50%;
+        left: 30%;
+        transform: translate(-50%,-50%);
+        background: #191919;
+        text-align: center;
+    }
+
+    .login_box h1{
+        color: white;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 3vw;
+    }
+
+    .login_box input{
+        font-size: 3vw;
+        text-align: center;
+    }
+
+    .about_box{
+        display: grid;
+        width: 20%;
+        padding: 3% 3% 3% 3%;
+        position: absolute;
+        top: 50%;
+        left: 80%;
+        transform: translate(-50%,-50%);
+        background:#242038;
+        opacity: 0.7;
+    }
+    
+    .about_box h1{ 
+        color: white;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 4vw;
+        text-align: center;
+    }
+    
+    .about_box p{
+        color:white;
+        font-size: 3vw;
+        text-align: left;
+    }
+
+    .login_box .buttons{
+        display: grid;
+        grid-template-columns: 17vw 17vw;
+        grid-column-gap: 4vw;
+        grid-template-rows: 4vw;
+        grid-template-areas: 
+        "prof stud";
+        grid-column-gap: 5vw;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .prof{
+        grid-area: prof;
+        background-color: #ff3838;
+        text-decoration: none;
+        font-size: 2.5vw;
+        border: none;
+        border: 0.1vw solid black;
+        border-radius: 0.5vw;
+        text-transform: uppercase;
+    }
+    
+    .stud{
+        grid-area: stud;
+        background-color: #ff3838;
+        text-decoration: none;
+        font-size: 2.5vw;
+        border: none;
+        border: 0.1vw solid black;
+        border-radius: 0.5vw;
+        text-transform: uppercase;
+    }
+} 
+
+
+@media only screen and (max-width:800px){
+    /* tablet: */
+    .login_box{
+        width: 50%;
+        padding: 3% 3% 3% 3%;
+        position: absolute;
+        top: 50%;
+        left: 30%;
+        transform: translate(-50%,-50%);
+        background: #191919;
+        text-align: center;
+    }
+
+    .login_box h1{
+        color: white;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 4vw;
+    }
+
+    .login_box input{
+        font-size: 3vw;
+        text-align: center;
+    }
+
+    .about_box{
+        display: grid;
+        width: 20%;
+        padding: 3% 3% 3% 3%;
+        position: absolute;
+        top: 50%;
+        left: 80%;
+        transform: translate(-50%,-50%);
+        background:#242038;
+        opacity: 0.7;
+    }
+    
+    .about_box h1{ 
+        color: white;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 4vw;
+        text-align: center;
+    }
+    
+    .about_box p{
+        color:white;
+        font-size: 3vw;
+        text-align: left;
+    }
+
+    .login_box .buttons{
+        display: grid;
+        grid-template-columns: 20vw;
+        grid-template-rows: 5vw 5vw;
+        grid-row-gap: 3vw;
+        grid-template-areas: 
+        "prof" 
+        "stud";
+        grid-column-gap: 5vw;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .prof{
+        grid-area: prof;
+        background-color: #ff3838;
+        text-decoration: none;
+        font-size: 3vw;
+        border: none;
+        border: 0.1vw solid black;
+        border-radius: 0.5vw;
+        text-transform: uppercase;
+    }
+    
+    .stud{
+        grid-area: stud;
+        background-color: #ff3838;
+        text-decoration: none;
+        font-size: 3vw;
+        border: none;
+        border: 0.1vw solid black;
+        border-radius: 0.5vw;
+        text-transform: uppercase;
+    }
+} 
+
+
+@media only screen and (max-width:500px) {
+    /* phone: */
+    .login_box{
+        width: 50%;
+        padding: 3% 3% 3% 3%;
+        position: absolute;
+        top: 50%;
+        left: 30%;
+        transform: translate(-50%,-50%);
+        background: #191919;
+        text-align: center;
+    }
+
+    .login_box h1{
+        color: white;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 5vw;
+    }
+
+    .login_box input{
+        font-size: 4vw;
+        text-align: center;
+    }
+
+    .about_box{
+        display: grid;
+        width: 20%;
+        padding: 3% 3% 3% 3%;
+        position: absolute;
+        top: 50%;
+        left: 80%;
+        transform: translate(-50%,-50%);
+        background:#242038;
+        opacity: 0.7;
+    }
+    
+    .about_box h1{ 
+        color: white;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 5vw;
+        text-align: center;
+    }
+    
+    .about_box p{
+        color:white;
+        font-size: 4vw;
+        text-align: left;
+    }
+}

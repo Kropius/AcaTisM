@@ -1,0 +1,361 @@
+
+body { 
+    background: #fff url(background-student.png)  no-repeat;
+    height:50vw;
+    background-size:100% 100%;
+    background-attachment: fixed;
+	margin: 0%; 
+    }
+
+
+header{
+    position: sticky;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: 3% 15% 7% 60% 15%;
+    height: 3.5vw;
+    justify-content: space-around;
+    background-image: linear-gradient( rgb(210, 197, 241), rgb(48, 22, 110));
+    box-shadow: 0em 0.3em 0.7em 0em #2b0047;
+
+}
+
+header .titleLogo{
+    grid-column-start: 2;
+    grid-column-end: 4;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+header #title{
+    position: relative;
+    color: #300653; 
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 2vw; 
+    font-weight: normal; 
+    align-content: center;
+    text-shadow: 0.2vw 0.1vw 0.1vw #b5a2be;
+    margin-top: 0.5vw;
+}
+
+header #logo{
+    background: url(wildcat.png) no-repeat;
+    width: 2.5vw;
+    height: 2.2vw;
+    margin-top: 0.5vw;
+    box-shadow: 0.2vw 0.2vw 0.2vw #b5a2be;
+    border-radius: 40%;
+
+}
+header .vertical{
+    height: 3.5vw;
+    border-right: 0.7vw solid #0b2783;
+    box-shadow: 1.1vw 0vw 0.4vw rgb(41, 38, 230);
+    position: relative;
+    right: 1.7vw;
+}
+
+header .searchBar{
+    position:relative;
+    align-content: center;
+    margin-top: 1vw;
+    height:0.5vw;
+}
+
+header .searchBar input:nth-of-type(1){
+    width: 15vw;
+    height: 1vw;
+    position: absolute;
+    font-size:1vw;
+}
+
+header .searchBar input:nth-of-type(2){
+    position: absolute;
+    width: 1.3vw;
+    height: 1.3vw; 
+    top:0.05vw;
+    right: 44.7vw;
+}
+
+header .userMenu
+{
+    grid-column-start: 5;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    position: relative;  
+    margin-top:1vw;
+}
+
+header .userMenu .userName
+{
+color: #300653; 
+font-size: 1.2vw; 
+font-weight: normal; 
+
+}
+
+header .userMenu .arrow .hoverbtn
+{
+    color: #050207;
+    font-size: 1.2vw; 
+    transform: rotate(180deg);
+    border: none;
+}
+
+header .userMenu .arrow
+{
+    position: relative;
+    margin-left: 0.3vw;
+} 
+
+header .userMenu .arrow .hoverContent {
+    position: absolute;
+    display: none;
+    right: -4.5vw;
+    top: 2vw;
+    background-color: #f1f1f1;
+    min-width: 9vw;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+header .userMenu .arrow .hoverContent a {
+    color: black;
+    padding: 1vw 1.5vw;
+    text-decoration: none;
+    display: block; 
+    font-size:1vw;
+}  
+
+header .userMenu .arrow .hoverContent a:hover {background-color: #ddd;}
+
+header .userMenu .arrow:hover .hoverContent {display: block;}
+
+header .userMenu .arrow:hover .hoverbtn {color:#b5a2be;}
+
+
+/*main*/
+
+main{
+    justify-content: space-evenly;
+    position: relative;
+    display:grid;
+    grid-auto-columns: auto;
+    grid-auto-rows: 10% 90%;
+    grid-gap: 2vw; 
+    font-size:1vw;
+    transition: 0.5s;
+    margin:3% 20% auto 20%;
+    
+}
+
+main .titleTips{
+    grid-column:1;
+    grid-row:1;
+    text-align: center;
+    text-shadow: 0.2vw 0.1vw 0.1vw #aca9ad;
+    background-color:rgba(89, 49, 163, 0.7);
+    border-bottom-style: double;
+    border-right-style:double;
+    border-left-style: double;
+    border-width:0.25vw;
+    border-radius: 3vw 3vw;
+    height: 100%;
+    transition: 0.5s;
+}
+
+main .tips{
+    grid-column:1;
+    grid-row:2;
+    padding:1% 5% 1% 5%;
+    background-color:rgba(110, 78, 168, 0.8);
+    border-bottom-style: double;
+    border-right-style:double;
+    border-width:0.25vw;
+    border-radius: 3vw 1vw;
+    transition: 0.5s;
+    border-left-style: double;
+}
+
+main .tips a{
+    color:black;
+}
+
+main .titleTips:hover,main .tips:hover{
+    border-style: dashed;
+    border-color: rgb(0, 0, 0);
+    border-width: 0.2vw;
+    border-radius:1vw 1vw;
+    transform: scale(1.05);
+    background-color:rgba(144, 115, 199, 0.9);
+}
+
+
+@media only screen and (max-width:800px)
+{   
+    header 
+    {
+    position: sticky;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: 7% 15% 7% 51% 20%;
+    height: 3.5vw;
+    justify-content: space-around;
+    background-image: linear-gradient( rgb(210, 197, 241), rgb(48, 22, 110));
+    box-shadow: 0em 0.3em 0.7em 0em #2b0047;
+    }
+
+    header .searchBar{
+        position:relative;
+        align-content: center;
+        margin-top: 0.8vw;
+        height:0.5vw;
+    }
+    header .searchBar input:nth-of-type(1){
+        width: 19vw;
+        height: 1vw;
+        position: absolute;
+        font-size:1vw;
+    }
+
+    header .searchBar input:nth-of-type(2){
+        position: absolute;
+        width: 1.3vw;
+        height: 1.3vw; 
+        top:0.2vw;
+        right: 31.5vw;
+    }
+
+    header .userMenu
+{
+    grid-column-start: 5;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    position: relative;  
+    margin-top:1vw;
+}
+
+header .userMenu .userName
+{
+color: #300653; 
+font-size: 1.2vw; 
+font-weight: normal; 
+
+}
+
+header .userMenu .arrow .hoverbtn
+{
+    color: #050207;
+    font-size: 1.2vw; 
+    transform: rotate(180deg);
+    border: none;
+}
+
+header .userMenu .arrow
+{
+    position: relative;
+    margin-left: 0.3vw;
+    top:-0.25vw;
+} 
+main{
+    justify-content: space-evenly;
+    position: relative;
+    display:grid;
+    grid-auto-columns: auto;
+    grid-auto-rows: 10% 90%;
+    grid-gap: 2vw; 
+    font-size:2vw;
+    transition: 0.5s;
+    margin:3% 10% auto 10% ;
+}
+
+main dd{
+    
+    margin-left: 0;
+}
+    
+}
+
+@media only screen and (max-width:550px)
+{   
+    header 
+    {
+    position: sticky;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: 7% 15% 7% 51% 20%;
+    height: 3.5vw;
+    justify-content: space-around;
+    background-image: linear-gradient( rgb(210, 197, 241), rgb(48, 22, 110));
+    box-shadow: 0em 0.3em 0.7em 0em #2b0047;
+    }
+
+    header .searchBar{
+        position:relative;
+   
+        margin-top: 0.8vw;
+        height:0.5vw;
+    }
+    header .searchBar input:nth-of-type(1){
+        width: 19vw;
+        height: 0.7vw;
+        position: absolute;
+        font-size:1vw;
+    }
+
+    header .searchBar input:nth-of-type(2){
+        position: absolute;
+        width: 1.3vw;
+        height: 1.3vw; 
+        top:0.2vw;
+        right: 31.3vw;
+    }
+    
+}
+
+@media only screen and (max-width:400px)
+{   
+    header 
+    {
+    position: sticky;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: 7% 15% 7% 51% 20%;
+    height: 3.5vw;
+    justify-content: space-around;
+    background-image: linear-gradient( rgb(210, 197, 241), rgb(48, 22, 110));
+    box-shadow: 0em 0.3em 0.7em 0em #2b0047;
+    }
+
+    header .searchBar{
+        position:relative;
+        margin-top: 0.65vw;
+        height:0.5vw;
+    }
+    header .searchBar input:nth-of-type(1){
+        width: 20vw;
+        height: 0.5vw;
+        position: absolute;
+        font-size:1vw;
+    }
+
+    header .searchBar input:nth-of-type(2){
+        position: absolute;
+        width: 1.3vw;
+        height: 1.3vw; 
+        top:0.3vw;
+        right: 30vw;
+    }
+    
+}
