@@ -128,7 +128,6 @@ header .userMenu .arrow .hoverContent a {
     padding: 1vw 1.5vw;
     text-decoration: none;
     display: block; 
-    block-size: 1vw;
     font-size:1vw;
 }  
 
@@ -298,7 +297,6 @@ main .menu article:hover{
 
     header .searchBar{
         position:relative;
-        box-align: center;
         margin-top: 0.8vw;
         height:0.5vw;
     }
@@ -337,7 +335,6 @@ main .menu article:hover{
 
     header .searchBar{
         position:relative;
-        box-align: center;
         margin-top: 0.65vw;
         height:0.5vw;
     }

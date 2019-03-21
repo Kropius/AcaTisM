@@ -128,7 +128,6 @@ header .userMenu .arrow .hoverContent a {
     padding: 1vw 1.5vw;
     text-decoration: none;
     display: block; 
-    block-size: 1vw;
     font-size:1vw;
 }  
 
@@ -146,11 +145,12 @@ main{
     position: relative;
     display:grid;
     grid-auto-columns: auto;
-    grid-auto-rows: 50% 50%;
+    grid-auto-rows: 10% 90%;
     grid-gap: 2vw; 
     font-size:1vw;
     transition: 0.5s;
     margin:3% 20% auto 20%;
+    
 }
 
 main .titleTips{
@@ -269,7 +269,7 @@ main{
     position: relative;
     display:grid;
     grid-auto-columns: auto;
-    grid-auto-rows: 50% 50%;
+    grid-auto-rows: 10% 90%;
     grid-gap: 2vw; 
     font-size:2vw;
     transition: 0.5s;
@@ -301,7 +301,7 @@ main dd{
 
     header .searchBar{
         position:relative;
-        box-align: center;
+   
         margin-top: 0.8vw;
         height:0.5vw;
     }
@@ -340,7 +340,6 @@ main dd{
 
     header .searchBar{
         position:relative;
-        box-align: center;
         margin-top: 0.65vw;
         height:0.5vw;
     }

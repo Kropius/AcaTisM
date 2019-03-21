@@ -128,7 +128,6 @@ header .userMenu .arrow .hoverContent a {
     padding: 1vw 1.5vw;
     text-decoration: none;
     display: block; 
-    block-size: 1vw;
     font-size:1vw;
 }  
 
@@ -228,7 +227,6 @@ header .userMenu .arrow
 
     header .searchBar{
         position:relative;
-        box-align: center;
         margin-top: 0.8vw;
         height:0.5vw;
     }
@@ -267,7 +265,6 @@ header .userMenu .arrow
 
     header .searchBar{
         position:relative;
-        box-align: center;
         margin-top: 0.65vw;
         height:0.5vw;
     }
@@ -283,20 +280,18 @@ header .userMenu .arrow
         width: 1.3vw;
         height: 1.3vw; 
         top:0.3vw;
-        right: 30zvw;
+        right: 30vw;
     }
     
 }
 
 /*main*/
 
-main{
+main .menu {
     margin-top: 5vw;
     margin-left:15%;
     margin-right:15%;
     margin-bottom:5vw;
-}
-main .menu {
     text-align: center;
     align-content: center;
     justify-content: space-evenly;
@@ -377,7 +372,6 @@ main .menu #apps{
 }
 
 main .menu div:hover{
-    block-size: 5vw;
     padding: 0vw 1vw 0vw 1vw;
     border-style: dashed;
     border-color: rgb(0, 0, 0);
@@ -412,7 +406,6 @@ main .menu :nth-child(2n):hover{
 
     header .searchBar{
         position:relative;
-        box-align: center;
         margin-top: 0.8vw;
         height:0.5vw;
     }
@@ -431,13 +424,15 @@ main .menu :nth-child(2n):hover{
         right: 31.3vw;
     }
     main .menu {
+        text-align: center;
+        align-content: center;
         justify-content: space-evenly;
         position: relative;
         display:grid;
-        margin-top: 20%;
-        margin-bottom: 50%;
+        margin-top: 10%;
+        margin-bottom: 20%;
         grid-auto-columns: auto;
-        grid-auto-rows: repeat(6,1fr);
+        grid-auto-rows: auto auto auto auto auto auto;
         grid-gap: 6vw 6vw; 
         font-size:3vw;
         transition: 0.5s;
@@ -471,12 +466,10 @@ main .menu :nth-child(2n):hover{
     }
 
     main .menu div:hover{
-        block-size: 5vw;
         border-style: dashed;
         border-color: rgb(0, 0, 0);
         border-width: 0.2vw;
-        border-radius:1vw 1vw;
-        height:15vw;   
+        border-radius:1vw 1vw;  
         transform: none;
     }
     
