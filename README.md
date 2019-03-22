@@ -1,6 +1,6 @@
 # AcaTisM
 This is a project made by Cercel Irina-Elena, Cioata Matei-Alexandru, Halauca Andrei and Mihnea Rezmerita for the Web Techonologies course.
-This project`s main target is to keep track on the lucrari licenta.
+This project`s main target is to keep track of the License Projects.
 The web page will be full of features like:
 - See the alocated students for one of your projects
 - See a professor`s domains of interest, as a student
