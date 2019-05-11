@@ -386,6 +386,21 @@ body>main .mainBody p
     text-align: center;
 }
 
+body>main .mainBody table input
+{
+    display:block;
+    width:90%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+body>main .mainBody .domain
+{
+    max-width: 58vw;
+    width: 50vw;
+    height: 7vh;
+}
+
 body>main .mainBody .inputSm
 {
     max-width: 58vw;
@@ -418,6 +433,54 @@ body>main .mainBody .submit
     background-color: rgb(140, 140, 255);
 }
 
+body>main .mainBody .domain
+{
+	min-height: 3vh;
+	max-width: 58vw;
+	width: 50vw;
+	height:3vh;
+}
+
+@media only screen and (max-width:1452px)
+{
+	body>main .mainBody
+    {
+        height: 65vw;
+        grid-column: 2;
+        background: rgba(28, 37, 65, 0.8);
+        box-shadow: 0px 6px 6px 2px #000000;
+    }
+	
+	body> main .mainBody .add2
+	{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		position: relative;
+		top: 4vh;
+	}
+	
+	body>main .mainBody .domain
+	{
+		min-height: 3vh;
+		max-width: 58vw;
+		width: 50vw;
+		height:5vh;
+	}
+}
+
+@media only screen and (max-width:1280px)
+{
+	body> main .mainBody .add2
+	{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		position: relative;
+		top: 7vh;
+	}
+}
+
 @media only screen and (max-width:1214px)
 {
     body>main .mainBody
@@ -427,6 +490,27 @@ body>main .mainBody .submit
         background: rgba(28, 37, 65, 0.8);
         box-shadow: 0px 6px 6px 2px #000000;
     }
+	
+	body> main .mainBody .add2
+	{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		position: relative;
+		top: 10vh;
+	}
+}
+
+@media only screen and (max-width:1084px)
+{
+	body> main .mainBody .add2
+	{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		position: relative;
+		top: 14vh;
+	}
 }
 
 @media only screen and (max-width:940px)
@@ -437,7 +521,7 @@ body>main .mainBody .submit
         grid-template-rows: 100%;
         grid-template-columns: 10% 80% 10%;
         height: 110vw;
-        background-image: url("back-img.jpg");
+        background-image: url("/Acatism/views/images/back-img.jpg");
     }
     body>main .mainBody
     {
@@ -470,6 +554,26 @@ body>main .mainBody .submit
         margin-bottom: 1vw;
         background-color: rgb(140, 140, 255);
     }
+	
+	body> main .mainBody .add2
+	{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		position: relative;
+		top: 30vh;
+	}
+}
+
+@media only screen and (max-width:776px)
+{
+	body>main .mainBody
+    {
+        height: 100vw;
+        grid-column: 2;
+        background: rgba(28, 37, 65, 0.8);
+        box-shadow: 0px 6px 6px 2px #000000;
+    }
 }
 
 @media only screen and (max-width:700px)
@@ -480,7 +584,7 @@ body>main .mainBody .submit
         grid-template-rows: 100%;
         grid-template-columns: 10% 80% 10%;
         height: 120vw;
-        background-image: url("back-img.jpg");
+        background-image: url("/Acatism/views/images/back-img.jpg");
     }
     body>main .mainBody
     {
@@ -513,6 +617,25 @@ body>main .mainBody .submit
         margin-bottom: 1vw;
         background-color: rgb(140, 140, 255);
     }
+	body> main .mainBody .add2
+	{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		position: relative;
+		top: 35vh;
+	}
+}
+
+@media only screen and (max-width:620px)
+{
+	body>main .mainBody
+    {
+        height: 110vw;
+        grid-column: 2;
+        background: rgba(28, 37, 65, 0.8);
+        box-shadow: 0px 6px 6px 2px #000000;
+    }
 }
 
 @media only screen and (max-width:570px)
@@ -523,7 +646,7 @@ body>main .mainBody .submit
         grid-template-rows: 100%;
         grid-template-columns: 5% 90% 5%;
         height: 170vw;
-        background-image: url("back-img.jpg");
+        background-image: url("/Acatism/views/images/back-img.jpg");
     }
     body>main .mainBody
     {
@@ -556,6 +679,14 @@ body>main .mainBody .submit
         margin-bottom: 1vw;
         background-color: rgb(140, 140, 255);
     }
+	body> main .mainBody .add2
+	{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		position: relative;
+		top: 45vh;
+	}
 }
 
 @media only screen and (max-width:398px)
@@ -566,11 +697,11 @@ body>main .mainBody .submit
         grid-template-rows: 100%;
         grid-template-columns: 5% 90% 5%;
         height: 200vw;
-        background-image: url("back-img.jpg");
+        background-image: url("/Acatism/views/images/back-img.jpg");
     }
     body>main .mainBody
     {
-        height: 180vw;
+        height: 190vw;
         grid-column: 2;
         background: rgba(28, 37, 65, 0.8);
         box-shadow: 0px 6px 6px 2px #000000;
@@ -599,4 +730,12 @@ body>main .mainBody .submit
         margin-bottom: 1vw;
         background-color: rgb(140, 140, 255);
     }
+	body> main .mainBody .add2
+	{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		position: relative;
+		top: 60vh;
+	}
 }

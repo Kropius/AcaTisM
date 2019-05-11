@@ -41,29 +41,83 @@
             <input type = "text" name="name" class = "inputName"><br>
             <p class = "short"> A small description of the project: </p>
             <textarea name="short" rows="5" class = "inputSm"></textarea><br>
-            <p class = "task"> Write a longer description of the project. The student must be able to understand all of the functionalities of his project:</p>
+            <p class = "task"> Write a longer description of the project. The student must be able to understand all of the functionalities of his project and what tools to use:</p>
             <textarea name="task" rows="5" class = "inputSm"></textarea><br>
             <p class = "plan"> Set some deadlines so the student can constantly work and present his progress:</p>
             <table>
-                <tr><td><label>Dates:</label></td><td><input type = "date" name="date1" class = "deadline"></td>
-                    <td><input type = "date" name="date2" class = "deadline"></td>
-                    <td><input type = "date" name="date3" class = "deadline"></td></tr>
+                <tr><td><label>Dates:</label></td><td><input type = "text" name="date1" class = "deadline" placeholder = "DD-MM-YYYY"></td>
+                    <td><input type = "text" name="date2" class = "deadline" placeholder = "DD-MM-YYYY"></td>
+                    <td><input type = "text" name="date3" class = "deadline" placeholder = "DD-MM-YYYY"></td>
+                    <td><input type = "text" name="date4" class = "deadline" placeholder = "DD-MM-YYYY"></td></tr>
                 <tr><td><label>Extensions:</label></td><td><input type = "text" name = "ext1" class = "deadline" placeholder = ".*"></td>
                     <td><input type = "text" name = "ext2" class = "deadline" placeholder = ".*"></td>
-                    <td><input type = "text" name = "ext3" class = "deadline" placeholder = ".*"></td></tr>
+                    <td><input type = "text" name = "ext3" class = "deadline" placeholder = ".*"></td>
+                    <td><input type = "text" name = "ext4" class = "deadline" placeholder = ".*"></td></tr>
                 <tr><td><label>Formats:</label></td><td><input type = "text" name = "for1" class = "deadline" placeholder = "Scholarly HTML, LTNS"></td>
-                    <td><input type = "text" name = "for2" class = "deadline" placeholder = "Scholarly HTML, LTNS"></td>
-                    <td><input type = "text" name = "for3" class = "deadline" placeholder = "Scholarly HTML, LTNS"></td></tr>
+                    <td><input type = "text" name = "for2" class = "deadline" placeholder = "Scholarly HTML, LTNS" width = 120></td>
+                    <td><input type = "text" name = "for3" class = "deadline" placeholder = "Scholarly HTML, LTNS"></td>
+                    <td><input type = "text" name = "for4" class = "deadline" placeholder = "Scholarly HTML, LTNS"></td></tr>
                 <tr><td><label>Descriptions:</label></td><td><input type = "text" name = "desc1" class = "deadline"></td>
                     <td><input type = "text" name = "desc2" class = "deadline"></td>
-                    <td><input type = "text" name = "desc3" class = "deadline"></td></tr>
+                    <td><input type = "text" name = "desc3" class = "deadline"></td>
+                    <td><input type = "text" name = "desc4" class = "deadline"></td></tr>
             </table>
-            <p class = "recom"> What would you recommend your students to do / use in this project?</p>
-            <textarea name="recom" rows="5" class = "inputSm"></textarea><br>
+            <p class = "recom"> What are the main domains of this project?</p>
+            <select name = "domain1" class = "domain">
+                <option value = "null">Null</option>
+                <option value = "graph theory">Graph Theory</option>
+                <option value = "databases">Databases</option>
+                <option value = "web technologies">Web Technologies</option>
+                <option value = "data structures">Data Structures</option>
+                <option value = "computer networks"> Computer Networks</option>
+                <option value = "Information Security"> Information Security</option>
+                <option value = "Functional Programming"> Functional Programming</option>
+                <option value = "Object Oriented Programming"> Object Oriented Programming</option>
+                <option value = "Natural Language Processing"> Natural Language Processing</option>
+                <option value = "Compilers"> Compilers</option>
+                <option value = "Optimisation Algorithms"> Optimisation Algorithms</option>
+                <option value = "Game Development">  Game Development</option>
+                <option value = "Multi-threading"> Multi-threading</option>
+                <option value = "Operating Systems"> Operating Systems</option>
+            </select>
+            <select name = "domain2" class = "domain">
+                <option value = "null">Null</option>
+                <option value = "graph theory">Graph Theory</option>
+                <option value = "databases">Databases</option>
+                <option value = "web technologies">Web Technologies</option>
+                <option value = "data structures">Data Structures</option>
+                <option value = "computer networks"> Computer Networks</option>
+                <option value = "Information Security"> Information Security</option>
+                <option value = "Functional Programming"> Functional Programming</option>
+                <option value = "Object Oriented Programming"> Object Oriented Programming</option>
+                <option value = "Natural Language Processing"> Natural Language Processing</option>
+                <option value = "Compilers"> Compilers</option>
+                <option value = "Optimisation Algorithms"> Optimisation Algorithms</option>
+                <option value = "Game Development">  Game Development</option>
+                <option value = "Multi-threading"> Multi-threading</option>
+                <option value = "Operating Systems"> Operating Systems</option>
+            </select>
+            <select name = "domain3" class = "domain">
+                <option value = "null">Null</option>
+                <option value = "graph theory">Graph Theory</option>
+                <option value = "databases">Databases</option>
+                <option value = "web technologies">Web Technologies</option>
+                <option value = "data structures">Data Structures</option>
+                <option value = "computer networks"> Computer Networks</option>
+                <option value = "Information Security"> Information Security</option>
+                <option value = "Functional Programming"> Functional Programming</option>
+                <option value = "Object Oriented Programming"> Object Oriented Programming</option>
+                <option value = "Natural Language Processing"> Natural Language Processing</option>
+                <option value = "Compilers"> Compilers</option>
+                <option value = "Optimisation Algorithms"> Optimisation Algorithms</option>
+                <option value = "Game Development">  Game Development</option>
+                <option value = "Multi-threading"> Multi-threading</option>
+                <option value = "Operating Systems"> Operating Systems</option>
+            </select>
             <input type = "submit" value = "Submit" class = "submit">
         </form>
-        <form class = "add2" action = '#'>
-            <input type = "submit" value = "Back to Projects" class = "submit">
+        <form class = "add2" action = "/Acatism/viewProjects/seeData">
+            <input type = "submit" value = "Back" class = "submit">
         </form>
     </div>
 </main>

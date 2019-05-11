@@ -20,7 +20,9 @@ class Bootstrap
         $controller = new $url[0];
         $controller->loadModel($url[0]);
 
-        if (isset($url[2]))
+        if (isset($url[3]))
+            $controller->{$url[1]}($url[2], $url[3]);
+        else if (isset($url[2]))
             $controller->{$url[1]}($url[2]);
         else if (isset($url[1]))
             $controller->{$url[1]}();
