@@ -1,13 +1,32 @@
+-- phpMyAdmin SQL Dump
+-- version 4.8.5
+-- https://www.phpmyadmin.net/
+--
+-- Gazdă: 127.0.0.1
+-- Timp de generare: iun. 01, 2019 la 01:44 AM
+-- Versiune server: 10.1.38-MariaDB
+-- Versiune PHP: 7.3.3
+
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
+
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
 
+--
+-- Bază de date: `academic thesis manager`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Structură tabel pentru tabel `collaborations`
+--
 
 CREATE TABLE `collaborations` (
   `id` int(11) NOT NULL,
@@ -15,9 +34,18 @@ CREATE TABLE `collaborations` (
   `id_student` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Eliminarea datelor din tabel `collaborations`
+--
+
 INSERT INTO `collaborations` (`id`, `id_teacher`, `id_student`) VALUES
-(2, 3, 1),
-(8, 3, 7);
+(1, 3, 7);
+
+-- --------------------------------------------------------
+
+--
+-- Structură tabel pentru tabel `commits`
+--
 
 CREATE TABLE `commits` (
   `id` int(11) NOT NULL,
@@ -27,17 +55,31 @@ CREATE TABLE `commits` (
   `add_date` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+-- --------------------------------------------------------
+
+--
+-- Structură tabel pentru tabel `concepts`
+--
+
 CREATE TABLE `concepts` (
   `id` int(11) NOT NULL,
   `id_teacher` int(11) NOT NULL,
   `id_project` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Eliminarea datelor din tabel `concepts`
+--
+
 INSERT INTO `concepts` (`id`, `id_teacher`, `id_project`) VALUES
-(13, 3, 2),
-(14, 3, 3),
-(15, 3, 4),
-(16, 3, 5);
+(16, 3, 5),
+(17, 3, 6);
+
+-- --------------------------------------------------------
+
+--
+-- Structură tabel pentru tabel `deadlines`
+--
 
 CREATE TABLE `deadlines` (
   `id` int(11) NOT NULL,
@@ -49,19 +91,30 @@ CREATE TABLE `deadlines` (
   `last_edit` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Eliminarea datelor din tabel `deadlines`
+--
+
 INSERT INTO `deadlines` (`id`, `mandatory_date`, `extension`, `format`, `description`, `id_project`, `last_edit`) VALUES
-(14, '2020-05-22', '.apk', 'Installer', 'The game must be in it\'s final form', 2, '2019-05-07'),
-(15, '2020-05-22', '.pdf', 'LTNS', 'The documentation for the project must be also ready', 2, '2019-05-07'),
-(16, '2020-05-25', '.pdf', 'LTNS', 'The architecture and his tasks for the first iteration.', 3, '2019-05-07'),
-(17, '2020-06-15', '.*', 'Code', 'Half of the project functionalities implemented.', 3, '2019-05-07'),
-(18, '2020-07-01', '.*', 'Code', 'The project must be in it\'s final form.', 3, '2019-05-07'),
-(19, '2020-07-01', '.html', 'Scholarly HTML', 'The documentation of the project must be ready.', 3, '2019-05-07'),
-(20, '2020-12-05', '.*', 'test', 'Just a test', 4, '2019-05-07');
+(21, '2020-03-26', '.born', 'birth', 'Be born', 5, '2019-05-20'),
+(25, '2020-03-22', '.c', 'code', 'asd', 6, '2019-05-20'),
+(26, '2020-06-22', '.pdf', 'LTNS', 'documentation', 6, '2019-05-20'),
+(27, '2020-04-22', '.html', 'Scholarly HTML', 'The project\'s Architecture', 6, '2019-05-20');
+
+-- --------------------------------------------------------
+
+--
+-- Structură tabel pentru tabel `domains`
+--
 
 CREATE TABLE `domains` (
   `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Eliminarea datelor din tabel `domains`
+--
 
 INSERT INTO `domains` (`id`, `name`) VALUES
 (1, 'Graph Theory'),
@@ -79,11 +132,23 @@ INSERT INTO `domains` (`id`, `name`) VALUES
 (13, 'Multi-threading'),
 (14, 'Operating Systems');
 
+-- --------------------------------------------------------
+
+--
+-- Structură tabel pentru tabel `interests`
+--
+
 CREATE TABLE `interests` (
   `id` int(11) NOT NULL,
   `id_student` int(11) NOT NULL,
   `id_domain` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Structură tabel pentru tabel `messages`
+--
 
 CREATE TABLE `messages` (
   `id` int(11) NOT NULL,
@@ -94,19 +159,36 @@ CREATE TABLE `messages` (
   `sent_date` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+-- --------------------------------------------------------
+
+--
+-- Structură tabel pentru tabel `projects`
+--
+
 CREATE TABLE `projects` (
   `id` int(11) NOT NULL,
   `name` varchar(100) NOT NULL,
   `short_description` text NOT NULL,
   `long_description` text NOT NULL,
-  `added_date` date NOT NULL
+  `added_date` date NOT NULL,
+  `last_edit` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-INSERT INTO `projects` (`id`, `name`, `short_description`, `long_description`, `added_date`) VALUES
-(2, 'Don\'t Fly Underground', 'A simple game in which you control a bird. You must avoid as many obstacles as you can in order to score as many points.', 'You have to program a game on Android. Your bird must avoid obstacles by flying: when you press a button, it has to reverse gravity. The game must have a beautiful graphical interface. The student can choose his textures. I recommend using Android Studio and LibGdx for this game. For the textures, I recomment using Photoshop.', '2019-05-07'),
-(3, 'USA Travel Map for Tourists', 'Make a map for the tourists of USA, in order to help them find easy routes between cities.', 'Build a map using the next informations: each road has a length, and the tourist is travelling by car. The longer the road, the more fuel he is going to need, so he needs to pay more money. Help him find the shortest route between any given cities. The student can use any programming language he wants.', '2019-05-07'),
-(4, 'This is a test', 'Write a test for this project.', 'Do not mind me I\'m just a test for this project!', '2019-05-07'),
-(5, 'A project with no deadlines', 'An example of a project with no set deadlines.', 'A longer example of a project with no set deadlines.', '2019-05-07');
+--
+-- Eliminarea datelor din tabel `projects`
+--
+
+INSERT INTO `projects` (`id`, `name`, `short_description`, `long_description`, `added_date`, `last_edit`) VALUES
+(5, 'A project with no deadlines', 'An example of a project with no set deadlines. But now it has some deadlines.', 'A longer example of a project with no set deadlines.', '2019-05-07', '2019-05-20'),
+(6, 'Don\'t Fly Underground 2', 'A game with a bird avoiding obstacles on Android.', 'An Android video game to play alone or with friends by beating their score! Help the bird avoid the obstacles in it\'s way and make some points!', '2019-05-20', '2019-05-20'),
+(7, 'asda', 'asdasfafs', 'asfsadgsadg', '2019-05-20', '2019-05-20'),
+(8, 'asda', 'asdasfafs', 'asfsadgsadg', '2019-05-20', '2019-05-20');
+
+-- --------------------------------------------------------
+
+--
+-- Structură tabel pentru tabel `requests`
+--
 
 CREATE TABLE `requests` (
   `id` int(11) NOT NULL,
@@ -114,6 +196,12 @@ CREATE TABLE `requests` (
   `id_project` int(11) NOT NULL,
   `apply_date` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Structură tabel pentru tabel `students`
+--
 
 CREATE TABLE `students` (
   `id` int(11) NOT NULL,
@@ -128,6 +216,10 @@ CREATE TABLE `students` (
   `experience` text,
   `studies` text
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Eliminarea datelor din tabel `students`
+--
 
 INSERT INTO `students` (`id`, `username`, `password`, `name`, `email`, `phone`, `faculty`, `description`, `lastgrade`, `experience`, `studies`) VALUES
 (1, 'matei.cioata', 'Cioata2019Fii', 'Cioata Matei-Alexandru', 'matei_alex1998@yahoo.ro', '123', 'Computer Science', NULL, NULL, NULL, NULL),
@@ -162,20 +254,35 @@ INSERT INTO `students` (`id`, `username`, `password`, `name`, `email`, `phone`, 
 (30, 'alex.martinas', 'Martinas2019Fii', 'Martinas Alexandru', 'test@test.com', '133', 'Computer Science', NULL, NULL, NULL, NULL),
 (31, 'vasile.voicu', 'Voicu2019Fii', 'Voicu Vasile', 'vasile.voicu@test.test', '123', '', NULL, NULL, NULL, NULL);
 
+-- --------------------------------------------------------
+
+--
+-- Structură tabel pentru tabel `subjects`
+--
+
 CREATE TABLE `subjects` (
   `id` int(11) NOT NULL,
   `id_domain` int(11) NOT NULL,
   `id_project` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Eliminarea datelor din tabel `subjects`
+--
+
 INSERT INTO `subjects` (`id`, `id_domain`, `id_project`) VALUES
-(9, 12, 2),
-(10, 8, 2),
-(11, 11, 3),
-(12, 1, 3),
-(13, 2, 3),
-(14, 3, 5),
-(15, 2, 5);
+(47, 3, 5),
+(48, 2, 5),
+(49, 9, 5),
+(53, 12, 6),
+(54, 8, 6),
+(55, 4, 6);
+
+-- --------------------------------------------------------
+
+--
+-- Structură tabel pentru tabel `teachers`
+--
 
 CREATE TABLE `teachers` (
   `id` int(11) NOT NULL,
@@ -189,6 +296,10 @@ CREATE TABLE `teachers` (
   `research` text,
   `studies` text
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Eliminarea datelor din tabel `teachers`
+--
 
 INSERT INTO `teachers` (`id`, `username`, `password`, `name`, `profession`, `email`, `phone`, `description`, `research`, `studies`) VALUES
 (1, 'cosmin.varlan', 'VarlanFii2019', 'Varlan Cosmin', 'Database Developer', 'cosmin.varlan@test.email.ro', '123', NULL, NULL, NULL),
@@ -204,6 +315,12 @@ INSERT INTO `teachers` (`id`, `username`, `password`, `name`, `profession`, `ema
 (12, 'oana.captarencu', 'CaptarencuFii2019', 'Captarencu Oana', 'Petri Nets Researcher', 'mihnea.rezmerita@romanvoda.ro', '256', NULL, NULL, NULL),
 (13, 'lenuta.alboaie', 'Alboaie2019Fii', 'Alboaie Lenuta', 'C++ Developer', 'agronaut02@gmail.com', '367', NULL, NULL, NULL);
 
+-- --------------------------------------------------------
+
+--
+-- Structură tabel pentru tabel `theses`
+--
+
 CREATE TABLE `theses` (
   `id` int(11) NOT NULL,
   `id_project` int(11) NOT NULL,
@@ -212,15 +329,18 @@ CREATE TABLE `theses` (
   `documentation_link` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Eliminarea datelor din tabel `theses`
+--
+
 INSERT INTO `theses` (`id`, `id_project`, `id_student`, `project_link`, `documentation_link`) VALUES
-(1, 2, 1, NULL, NULL),
-(2, 2, 1, NULL, NULL),
-(3, 3, 7, NULL, NULL),
-(4, 2, 7, NULL, NULL),
-(5, 2, 7, NULL, NULL),
-(6, 2, 7, NULL, NULL),
-(7, 5, 7, NULL, NULL),
-(8, 5, 7, NULL, NULL);
+(1, 6, 7, NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Structură tabel pentru tabel `work`
+--
 
 CREATE TABLE `work` (
   `id` int(11) NOT NULL,
@@ -228,143 +348,263 @@ CREATE TABLE `work` (
   `id_teacher` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Indexuri pentru tabele eliminate
+--
 
+--
+-- Indexuri pentru tabele `collaborations`
+--
 ALTER TABLE `collaborations`
   ADD PRIMARY KEY (`id`),
   ADD KEY `id_teacher` (`id_teacher`),
   ADD KEY `id_student` (`id_student`);
 
+--
+-- Indexuri pentru tabele `commits`
+--
 ALTER TABLE `commits`
   ADD KEY `id_deadline` (`id_deadline`),
   ADD KEY `id_student` (`id_student`);
 
+--
+-- Indexuri pentru tabele `concepts`
+--
 ALTER TABLE `concepts`
   ADD PRIMARY KEY (`id`),
   ADD KEY `id_teacher` (`id_teacher`),
   ADD KEY `id_project` (`id_project`);
 
+--
+-- Indexuri pentru tabele `deadlines`
+--
 ALTER TABLE `deadlines`
   ADD PRIMARY KEY (`id`),
   ADD KEY `id_project` (`id_project`);
 
+--
+-- Indexuri pentru tabele `domains`
+--
 ALTER TABLE `domains`
   ADD PRIMARY KEY (`id`);
 
+--
+-- Indexuri pentru tabele `interests`
+--
 ALTER TABLE `interests`
   ADD PRIMARY KEY (`id`),
   ADD KEY `id_domain` (`id_domain`),
   ADD KEY `id_student` (`id_student`);
 
+--
+-- Indexuri pentru tabele `messages`
+--
 ALTER TABLE `messages`
   ADD PRIMARY KEY (`id`),
   ADD KEY `id_student` (`id_student`),
   ADD KEY `id_teacher` (`id_teacher`);
 
+--
+-- Indexuri pentru tabele `projects`
+--
 ALTER TABLE `projects`
   ADD PRIMARY KEY (`id`);
 
+--
+-- Indexuri pentru tabele `requests`
+--
 ALTER TABLE `requests`
   ADD PRIMARY KEY (`id`),
   ADD KEY `id_student` (`id_student`),
   ADD KEY `requests_ibfk_2` (`id_project`);
 
+--
+-- Indexuri pentru tabele `students`
+--
 ALTER TABLE `students`
   ADD PRIMARY KEY (`id`);
 
+--
+-- Indexuri pentru tabele `subjects`
+--
 ALTER TABLE `subjects`
   ADD PRIMARY KEY (`id`),
   ADD KEY `id_domain` (`id_domain`),
   ADD KEY `id_project` (`id_project`);
 
+--
+-- Indexuri pentru tabele `teachers`
+--
 ALTER TABLE `teachers`
   ADD PRIMARY KEY (`id`);
 
+--
+-- Indexuri pentru tabele `theses`
+--
 ALTER TABLE `theses`
   ADD PRIMARY KEY (`id`),
   ADD KEY `id_project` (`id_project`),
   ADD KEY `id_student` (`id_student`);
 
+--
+-- Indexuri pentru tabele `work`
+--
 ALTER TABLE `work`
   ADD PRIMARY KEY (`id`),
   ADD KEY `id_domain` (`id_domain`),
   ADD KEY `id_teacher` (`id_teacher`);
 
+--
+-- AUTO_INCREMENT pentru tabele eliminate
+--
 
+--
+-- AUTO_INCREMENT pentru tabele `collaborations`
+--
 ALTER TABLE `collaborations`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
+--
+-- AUTO_INCREMENT pentru tabele `concepts`
+--
 ALTER TABLE `concepts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
+--
+-- AUTO_INCREMENT pentru tabele `deadlines`
+--
 ALTER TABLE `deadlines`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
+--
+-- AUTO_INCREMENT pentru tabele `domains`
+--
 ALTER TABLE `domains`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
+--
+-- AUTO_INCREMENT pentru tabele `interests`
+--
 ALTER TABLE `interests`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
+--
+-- AUTO_INCREMENT pentru tabele `messages`
+--
 ALTER TABLE `messages`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
+--
+-- AUTO_INCREMENT pentru tabele `projects`
+--
 ALTER TABLE `projects`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
+--
+-- AUTO_INCREMENT pentru tabele `requests`
+--
 ALTER TABLE `requests`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
+--
+-- AUTO_INCREMENT pentru tabele `students`
+--
 ALTER TABLE `students`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
+--
+-- AUTO_INCREMENT pentru tabele `subjects`
+--
 ALTER TABLE `subjects`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
 
+--
+-- AUTO_INCREMENT pentru tabele `teachers`
+--
 ALTER TABLE `teachers`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
+--
+-- AUTO_INCREMENT pentru tabele `theses`
+--
 ALTER TABLE `theses`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
+--
+-- AUTO_INCREMENT pentru tabele `work`
+--
 ALTER TABLE `work`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
+--
+-- Constrângeri pentru tabele eliminate
+--
 
+--
+-- Constrângeri pentru tabele `collaborations`
+--
 ALTER TABLE `collaborations`
   ADD CONSTRAINT `collaborations_ibfk_1` FOREIGN KEY (`id_teacher`) REFERENCES `teachers` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION,
   ADD CONSTRAINT `collaborations_ibfk_2` FOREIGN KEY (`id_student`) REFERENCES `students` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION;
 
+--
+-- Constrângeri pentru tabele `commits`
+--
 ALTER TABLE `commits`
   ADD CONSTRAINT `commits_ibfk_1` FOREIGN KEY (`id_deadline`) REFERENCES `deadlines` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION,
   ADD CONSTRAINT `commits_ibfk_2` FOREIGN KEY (`id_student`) REFERENCES `students` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION;
 
+--
+-- Constrângeri pentru tabele `concepts`
+--
 ALTER TABLE `concepts`
   ADD CONSTRAINT `concepts_ibfk_1` FOREIGN KEY (`id_teacher`) REFERENCES `teachers` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION,
   ADD CONSTRAINT `concepts_ibfk_2` FOREIGN KEY (`id_project`) REFERENCES `projects` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION;
 
+--
+-- Constrângeri pentru tabele `deadlines`
+--
 ALTER TABLE `deadlines`
   ADD CONSTRAINT `deadlines_ibfk_1` FOREIGN KEY (`id_project`) REFERENCES `projects` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION;
 
+--
+-- Constrângeri pentru tabele `interests`
+--
 ALTER TABLE `interests`
   ADD CONSTRAINT `interests_ibfk_1` FOREIGN KEY (`id_domain`) REFERENCES `domains` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION,
   ADD CONSTRAINT `interests_ibfk_2` FOREIGN KEY (`id_student`) REFERENCES `students` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION;
 
+--
+-- Constrângeri pentru tabele `messages`
+--
 ALTER TABLE `messages`
   ADD CONSTRAINT `messages_ibfk_1` FOREIGN KEY (`id_student`) REFERENCES `students` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION,
   ADD CONSTRAINT `messages_ibfk_2` FOREIGN KEY (`id_teacher`) REFERENCES `teachers` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION;
 
+--
+-- Constrângeri pentru tabele `requests`
+--
 ALTER TABLE `requests`
   ADD CONSTRAINT `requests_ibfk_1` FOREIGN KEY (`id_student`) REFERENCES `students` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION,
   ADD CONSTRAINT `requests_ibfk_2` FOREIGN KEY (`id_project`) REFERENCES `projects` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION;
 
+--
+-- Constrângeri pentru tabele `subjects`
+--
 ALTER TABLE `subjects`
   ADD CONSTRAINT `subjects_ibfk_1` FOREIGN KEY (`id_domain`) REFERENCES `domains` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION,
   ADD CONSTRAINT `subjects_ibfk_2` FOREIGN KEY (`id_project`) REFERENCES `projects` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION;
 
+--
+-- Constrângeri pentru tabele `theses`
+--
 ALTER TABLE `theses`
   ADD CONSTRAINT `theses_ibfk_1` FOREIGN KEY (`id_project`) REFERENCES `projects` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION,
   ADD CONSTRAINT `theses_ibfk_2` FOREIGN KEY (`id_student`) REFERENCES `students` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION;
 
+--
+-- Constrângeri pentru tabele `work`
+--
 ALTER TABLE `work`
   ADD CONSTRAINT `work_ibfk_1` FOREIGN KEY (`id_domain`) REFERENCES `domains` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION,
   ADD CONSTRAINT `work_ibfk_2` FOREIGN KEY (`id_teacher`) REFERENCES `teachers` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION;
