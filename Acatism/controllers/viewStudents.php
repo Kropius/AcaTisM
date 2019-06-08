@@ -17,8 +17,15 @@ class ViewStudents extends Controller
     public function deleteStudent($student, $project)
     {
         Session::init();
-        $this->model->deleteStudent($student, $project);
-        header('Location: /Acatism/viewStudents/seeData');
-        die();
+        $data = $this->model->deleteStudent($student, $project);
+        if($data == -2)
+        {
+            $this->view->setData(-2);
+            $this->view->render('manageErrors_view');
+        }
+        else {
+            header('Location: /Acatism/viewStudents/seeData');
+            die();
+        }
     }
 }
