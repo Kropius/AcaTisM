@@ -1,0 +1,722 @@
+
+body {
+
+
+
+background: #fff url("/Acatism/views/Images/background-student.png")  no-repeat;
+background-size: cover;
+background-attachment: fixed;
+margin: 0%;
+/*background-color: #0b2783;*/
+}
+header{
+    position: sticky;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: 3% 15% 7% 60% 15%;
+    height: 3.5vw;
+    justify-content: space-around;
+    background-image: linear-gradient( rgb(210, 197, 241), rgb(48, 22, 110));
+    box-shadow: 0em 0.3em 0.7em 0em #2b0047;
+
+}
+
+header .titleLogo{
+    grid-column-start: 2;
+    grid-column-end: 4;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+header #title{
+    position: relative;
+    color: #300653; 
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 2vw; 
+    font-weight: normal; 
+    align-content: center;
+    text-shadow: 0.2vw 0.1vw 0.1vw #b5a2be;
+    margin-top: 0.5vw;
+}
+
+header #logo{
+    background: url("/Acatism/views/Images/wildcat.png") no-repeat;
+    width: 2.5vw;
+    height: 2.2vw;
+    margin-top: 0.5vw;
+    box-shadow: 0.2vw 0.2vw 0.2vw #b5a2be;
+    border-radius: 40%;
+
+}
+header .vertical{
+    height: 3.5vw;
+    border-right: 0.7vw solid #0b2783;
+    box-shadow: 1.1vw 0vw 0.4vw rgb(41, 38, 230);
+    position: relative;
+    right: 1.7vw;
+}
+
+header .searchBar{
+    position:relative;
+    align-content: center;
+    margin-top: 1vw;
+    height:0.5vw;
+}
+
+header .searchBar input:nth-of-type(1){
+    width: 15vw;
+    height: 1vw;
+    position: absolute;
+    font-size:1vw;
+}
+
+header .searchBar input:nth-of-type(2){
+    position: absolute;
+    width: 1.3vw;
+    height: 1.3vw; 
+    top:0.05vw;
+    right: 44.7vw;
+}
+
+header .userMenu
+{
+    grid-column-start: 5;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    position: relative;  
+    margin-top:1vw;
+}
+
+header .userMenu .userName
+{
+color: #300653; 
+font-size: 1.2vw; 
+font-weight: normal; 
+
+}
+
+header .userMenu .arrow .hoverbtn
+{
+    color: #050207;
+    font-size: 1.2vw; 
+    transform: rotate(180deg);
+    border: none;
+}
+
+header .userMenu .arrow
+{
+    position: relative;
+    margin-left: 0.3vw;
+} 
+
+header .userMenu .arrow .hoverContent {
+    position: absolute;
+    display: none;
+    right: -4.5vw;
+    top: 2vw;
+    background-color: #f1f1f1;
+    min-width: 9vw;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+header .userMenu .arrow .hoverContent a {
+    color: black;
+    padding: 1vw 1.5vw;
+    text-decoration: none;
+    display: block; 
+    font-size:1vw;
+}  
+
+header .userMenu .arrow .hoverContent a:hover {background-color: #ddd;}
+
+header .userMenu .arrow:hover .hoverContent {display: block;}
+
+header .userMenu .arrow:hover .hoverbtn {color:#b5a2be;}
+
+@media only screen and (max-width:800px)
+{   
+    header 
+    {
+    position: sticky;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: 7% 15% 7% 51% 20%;
+    height: 3.5vw;
+    justify-content: space-around;
+    background-image: linear-gradient( rgb(210, 197, 241), rgb(48, 22, 110));
+    box-shadow: 0em 0.3em 0.7em 0em #2b0047;
+    }
+
+    header .searchBar{
+        position:relative;
+        align-content: center;
+        margin-top: 0.8vw;
+        height:0.5vw;
+    }
+    header .searchBar input:nth-of-type(1){
+        width: 19vw;
+        height: 1vw;
+        position: absolute;
+        font-size:1vw;
+    }
+
+    header .searchBar input:nth-of-type(2){
+        position: absolute;
+        width: 1.3vw;
+        height: 1.3vw; 
+        top:0.2vw;
+        right: 31.5vw;
+    }
+
+    header .userMenu
+{
+    grid-column-start: 5;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    position: relative;  
+    margin-top:1vw;
+}
+
+header .userMenu .userName
+{
+color: #300653; 
+font-size: 1.2vw; 
+font-weight: normal; 
+
+}
+
+header .userMenu .arrow .hoverbtn
+{
+    color: #050207;
+    font-size: 1.2vw; 
+    transform: rotate(180deg);
+    border: none;
+}
+
+header .userMenu .arrow
+{
+    position: relative;
+    margin-left: 0.3vw;
+    top:-0.25vw;
+} 
+    
+}
+
+@media only screen and (max-width:550px)
+{   
+    header 
+    {
+    position: sticky;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: 7% 15% 7% 51% 20%;
+    height: 3.5vw;
+    justify-content: space-around;
+    background-image: linear-gradient( rgb(210, 197, 241), rgb(48, 22, 110));
+    box-shadow: 0em 0.3em 0.7em 0em #2b0047;
+    }
+
+    header .searchBar{
+        position:relative;
+        margin-top: 0.8vw;
+        height:0.5vw;
+    }
+    header .searchBar input:nth-of-type(1){
+        width: 19vw;
+        height: 0.7vw;
+        position: absolute;
+        font-size:1vw;
+    }
+
+    header .searchBar input:nth-of-type(2){
+        position: absolute;
+        width: 1.3vw;
+        height: 1.3vw; 
+        top:0.2vw;
+        right: 31.3vw;
+    }
+    
+}
+
+@media only screen and (max-width:400px)
+{   
+    header 
+    {
+    position: sticky;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: 7% 15% 7% 51% 20%;
+    height: 3.5vw;
+    justify-content: space-around;
+    background-image: linear-gradient( rgb(210, 197, 241), rgb(48, 22, 110));
+    box-shadow: 0em 0.3em 0.7em 0em #2b0047;
+    }
+
+    header .searchBar{
+        position:relative;
+       
+        margin-top: 0.65vw;
+        height:0.5vw;
+    }
+    header .searchBar input:nth-of-type(1){
+        width: 20vw;
+        height: 0.5vw;
+        position: absolute;
+        font-size:1vw;
+    }
+
+    header .searchBar input:nth-of-type(2){
+        position: absolute;
+        width: 1.3vw;
+        height: 1.3vw; 
+        top:0.3vw;
+        right: 30vw;
+    }
+    
+}
+
+html,main{
+    position: relative;
+    background-image: url("/Acatism/views/Images/background-student.png");
+    background-position:top;
+    background-attachment: fixed;
+    background-size:100% 100%;
+   height:150vw;
+   background-repeat: no-repeat;
+}
+
+.main-content{
+    position:absolute;
+    top:0px;
+    background-size:80%;
+    background:#297fb96b;
+    height:150vw;
+    width:50%;
+    right:25%;
+}
+.main-content h1:hover{
+    background-color:blue;
+    border-style:solid;
+    border-color: #bdc3c7;
+    border-radius: 0%;
+    font-style: oblique
+    
+}
+.main-content h1{
+  
+    
+    background: blue;
+    border-style: solid;
+    border-color: #9b59b6;
+    border-radius: 10%;
+    transition:0.5s;
+    padding:2%;
+    padding-right:10%;
+    position:relative;
+    width:25.0vw;
+    height:2vw;
+    left:15%;
+    top:0.5%;
+   
+    font-family: "Rockwell Extra Bold", "Rockwell Bold", monospace; 
+    font-style: normal; font-variant: normal;
+    height:3vw;   
+    bottom:5vw;
+   
+}
+h1 + .content {
+
+    display:grid;  
+    grid-template-rows: 20% 20% 20% 20% 20%;
+    grid-gap:1vw;
+    height:200vw;
+    width:40vw;
+    left:80vw;
+}
+#study
+{
+    
+    transition:0.5s;
+    font-family: "Rockwell Extra Bold", "Rockwell Bold", monospace;
+    font-style: normal; font-variant: normal;
+    font-size:2vw;
+    height:15vw;
+    margin-left:3vw;
+    background-color: #95a5a642;
+    border-style:solid;
+    border-color: #bdc3c7;
+    border-radius: 10%;
+    padding:2.5vw;
+}
+#contact
+{
+    transition:0.5s;
+    font-family: "Rockwell Extra Bold", "Rockwell Bold", monospace; 
+    font-style: normal; font-variant: normal;
+    font-size:2vw;
+    height:15vw;
+    margin-left:3vw;
+    background-color: #95a5a642;
+    border-style:solid;
+    border-color: #bdc3c7;
+    border-radius: 10%;
+    padding:2.5vw;
+}
+.content article:hover,.main-content #backArrow:hover{
+    background-color:#2c3e50;
+    border-style:solid;
+    border-color: #8e44ad;
+    border-radius: 0%;
+    font-style: oblique;
+}
+ #subjects{
+
+    transition:0.5s;
+    font-family: "Rockwell Extra Bold", "Rockwell Bold", monospace; 
+    font-style: normal; font-variant: normal;
+     width:32vw;
+    font-size:2vw;
+        height:max-content;
+  margin-left:3vw;
+  background-color: #95a5a642;
+    border-style:solid;
+    border-color: #bdc3c7;
+    border-radius: 10%;
+    padding:2.5vw;
+
+}
+#submitbutton{
+    position: absolute;
+    top:105vw;
+    left:19vw;
+    border-style:solid;
+    border-color: #8e44ad;
+    background-color: green;
+    border-radius: 0%;
+    width:10vw;
+    height:3vw;
+}
+.content article{
+
+    transition:0.5s;
+    font-family: "Rockwell Extra Bold", "Rockwell Bold", monospace; 
+    font-style: normal; font-variant: normal;
+    font-size:2vw;
+        height:10vw;   
+  margin-left:3vw;
+  background-color: #95a5a642;
+    border-style:solid;
+    border-color: #bdc3c7;
+    border-radius: 10%;
+    padding:2.5vw;
+
+}
+article input{
+    height:4vw;
+    width:27vw;
+    left:500vw;
+    font-family: "Rockwell Extra Bold", "Rockwell Bold", monospace; 
+    font-style: normal; font-variant: normal;
+
+}
+article input:hover{
+    
+}
+#button1,#button2,#button3,#button3,#button4,#button5:hover{
+    background-color:rgb(100, 169, 173);
+    border-style:solid;
+    border-color: #8e44ad;
+
+    border-radius: 10%;
+
+}
+#button1,#button2,#button3,#button3,#button4,#button5{
+    transition:0.5s;
+   margin-top:2vw;
+    height:2vw;
+    width:5vw;
+    background-color:#2c3e50;   
+    border-radius:35%;
+    border-style:solid;
+    border-color: #bdc3c7;
+
+}
+
+.title{
+    height:1vw;
+}
+#studies:focus,#contacts:focus,#experiencess:focus,#subject:focus,#descriptions:focus{
+  background-color: #2ecc7023;
+  font-family: "Rockwell Extra Bold", "Rockwell Bold", monospace; 
+  font-style: normal; font-variant: normal;
+  font-style: oblique
+
+}
+
+#studies,#contacts,#experiencess,#subject,#descriptions{
+    transition:0.5s;
+    border-style:solid;
+    border-color: #27ae60;
+}
+.main-content #backArrow{
+transition:0.5s;
+position: absolute;
+top:4vw;
+left:1vw;
+height:2vw;
+width:5vw;
+text-align:center;
+font-family: "Rockwell Extra Bold", "Rockwell Bold", monospace; 
+font-style: normal; font-variant: normal;
+background-color: #95a5a642;
+ border-style:solid;
+ border-color: #bdc3c7;
+border-radius: 20%;
+
+}
+@media only screen and (max-width:1200px) and (min-width:1000px)
+{
+    html,.main,.main-content{
+        height:130vw;
+    }
+    .main-content{
+        height:130vw;
+    }
+    .main-content #backArrow{
+        transition:0.5s;
+        position: absolute;
+        font-size: 1vw;
+        left:1vw;
+        height:2vw;
+        width:5vw;
+        
+        
+        }
+    #studies,#contacts,#reasearches,#subject,#descriptions{
+
+        font-size:2vh;
+    }
+    #button1,#button2,#button3,#button3,#button4,#button5{
+        transition:0.5s;
+       margin-top:0.5vh;
+        height:3.5vw;
+        width:10vw;
+        font-size:1.0vw;
+
+        
+    
+    }
+    
+    article input{
+        height:2vw;
+        width:30vw;
+        left:500vw;
+        font-size:10vh;
+    }
+    .content article{
+      height:10vw;   
+      margin-left:3vw;
+      padding:2.5vw;
+      font-size:3vw;    
+    
+    }
+    .main-content h1{
+        
+        padding:2%;
+        padding-right:10%;
+        position:relative;
+        width:25.0vw;
+        height:2vw;
+        left:15%;
+        top:0.1%;
+        font-size:2.0vw;
+    }
+    h1 + .content {
+    
+        display:grid;  
+        grid-template-rows: 20% 20% 20% 20% 20%;
+        grid-gap:1vw;
+        width:44vw;
+        left:100vw;
+    }   
+}
+
+
+@media only screen and (min-width:550px) and (max-width:1000px)
+{
+    html,.main,.main-content{
+        height:130vw;
+    }
+    .main-content{
+        height:130vw;
+    }
+    .main-content #backArrow{
+        transition:0.5s;
+        top:3vh;
+        font-size: 1vh;
+        left:1vw;
+        height:2.5vw;
+        width:5vw;
+        
+        
+        }
+    #studies,#contacts,#reasearches,#subject,#descriptions{
+        font-size:2vh;
+    }
+    #button1,#button2,#button3,#button3,#button4,#button5{
+        
+        transition:0.5s;
+         margin-top:0vh;
+        height:2.5vw;
+        width:10vw;
+        font-size:1.5vw;
+
+        
+    
+    }
+    
+    article input{
+        height:2vw;
+        width:30vw;
+        left:500vw;
+    }
+    .content article{
+      height:10vw;   
+      margin-left:3vw;
+      padding:2.5vw;
+      font-size:3vw;    
+    
+    }
+    .main-content h1{
+        
+        padding:2%;
+        padding-right:10%;
+        position:relative;
+        width:25.0vw;
+        height:2vw;
+        left:15%;
+        top:0.1%;
+        font-size:2.1vw;
+    }
+    h1 + .content {
+    
+        display:grid;  
+        grid-template-rows: 20% 20% 20% 20% 20%;
+        grid-gap:1vw;
+        width:44vw;
+        left:100vw;
+    }   
+
+    
+}
+
+@media only screen and (max-width:550px)
+{
+    #subjects{
+
+
+        transition:0.5s;
+        font-family: "Rockwell Extra Bold", "Rockwell Bold", monospace;
+        font-style: normal; font-variant: normal;
+        width:40vw;
+        font-size:2vw;
+        height:max-content;
+        margin-left:3vw;
+        background-color: #95a5a642;
+        border-style:solid;
+        border-color: #bdc3c7;
+        border-radius: 10%;
+        padding:2.5vw;
+
+    }
+    html,.main{
+        height:150vw;
+    }
+    .main-content{
+        height:150vw;
+    }
+    .main-content #backArrow{
+        transition:0.5s;
+        position: absolute;
+        top:1.5vw;
+        font-size: 0.8vh;
+        left:1vw;
+        height:2vh;
+        width:5vw;
+        
+        
+        }
+    #submitbutton{
+
+        position: absolute;
+        top:135vw;
+        left:19vw;
+        border-style:solid;
+        border-color: #8e44ad;
+        background-color: green;
+        border-radius: 0%;
+        width:max-content;
+        height:max-content;
+    }
+    #studies,#contacts,#experiencess,#subject,#descriptions{
+        font-size:1vh;
+    }
+    #button1,#button2,#button3,#button3,#button4,#button5{
+        
+        transition:0.5s;
+         margin-top:2.5vh;
+        height:4.5vw;
+        width:11vw;
+        font-size:2.2vw;
+
+        
+    
+    }
+    
+    article input{
+        height:2vw;
+        width:30vw;
+        left:500vw;
+    }
+    .content article{
+      height:20vw;   
+      margin-left:3vw;
+      padding:2.5vw;
+      font-size:3vw;    
+    
+    }
+    .main-content h1{
+        
+        padding:2%;
+        
+        position:relative;
+        width:30.0vw;
+        height:4vw;
+        left:15%;
+        top:0.1%;
+        font-size:2.0vw;
+    }
+    h1 + .content {
+    
+        display:grid;  
+        grid-template-rows: 20% 20% 20% 20% 20%;
+        grid-gap:1vw;
+        width:44vw;
+        left:100vw;
+    }  
+   
+}
+
+

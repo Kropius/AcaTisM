@@ -1,0 +1,621 @@
+
+body {
+    background: #fff url("/Acatism/views/Images/background-student.png")  no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    margin: 0%;
+}
+
+
+header{
+    position: sticky;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: 3% 15% 7% 60% 15%;
+    height: 3.5vw;
+    justify-content: space-around;
+    background-image: linear-gradient( rgb(210, 197, 241), rgb(48, 22, 110));
+    box-shadow: 0em 0.3em 0.7em 0em #2b0047;
+
+}
+
+header .titleLogo{
+    grid-column-start: 2;
+    grid-column-end: 4;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+header #title{
+    position: relative;
+    color: #300653;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 2vw;
+    font-weight: normal;
+    align-content: center;
+    text-shadow: 0.2vw 0.1vw 0.1vw #b5a2be;
+    margin-top: 0.5vw;
+}
+
+header #logo{
+    background: url("/Acatism/views/Images/wildcat.png") no-repeat;
+    width: 2.5vw;
+    height: 2.2vw;
+    margin-top: 0.5vw;
+    box-shadow: 0.2vw 0.2vw 0.2vw #b5a2be;
+    border-radius: 40%;
+
+}
+header .vertical{
+    height: 3.5vw;
+    border-right: 0.7vw solid #0b2783;
+    box-shadow: 1.1vw 0vw 0.4vw rgb(41, 38, 230);
+    position: relative;
+    right: 1.7vw;
+}
+
+header .searchBar{
+    position:relative;
+    align-content: center;
+    margin-top: 1vw;
+    height:0.5vw;
+}
+
+header .searchBar input:nth-of-type(1){
+    width: 15vw;
+    height: 1vw;
+    position: absolute;
+    font-size:1vw;
+}
+
+header .searchBar input:nth-of-type(2){
+    position: absolute;
+    width: 1.3vw;
+    height: 1.3vw;
+    top:0.05vw;
+    right: 44.7vw;
+}
+
+header .userMenu
+{
+    grid-column-start: 5;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    position: relative;
+    margin-top:1vw;
+}
+
+header .userMenu .userName
+{
+    color: #300653;
+    font-size: 1.2vw;
+    font-weight: normal;
+
+}
+
+header .userMenu .arrow .hoverbtn
+{
+    color: #050207;
+    font-size: 1.2vw;
+    transform: rotate(180deg);
+    border: none;
+}
+
+header .userMenu .arrow
+{
+    position: relative;
+    margin-left: 0.3vw;
+}
+
+header .userMenu .arrow .hoverContent {
+    position: absolute;
+    display: none;
+    right: -4.5vw;
+    top: 2vw;
+    background-color: #f1f1f1;
+    min-width: 9vw;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+header .userMenu .arrow .hoverContent a {
+    color: black;
+    padding: 1vw 1.5vw;
+    text-decoration: none;
+    display: block;
+    font-size:1vw;
+}
+
+header .userMenu .arrow .hoverContent a:hover {background-color: #ddd;}
+
+header .userMenu .arrow:hover .hoverContent {display: block;}
+
+header .userMenu .arrow:hover .hoverbtn {color:#b5a2be;}
+
+@media only screen and (max-width:800px)
+{
+    header
+    {
+        position: sticky;
+        z-index: 3;
+        top: 0;
+        left: 0;
+        display: grid;
+        grid-template-columns: 7% 15% 7% 51% 20%;
+        height: 3.5vw;
+        justify-content: space-around;
+        background-image: linear-gradient( rgb(210, 197, 241), rgb(48, 22, 110));
+        box-shadow: 0em 0.3em 0.7em 0em #2b0047;
+    }
+
+    header .searchBar{
+        position:relative;
+        align-content: center;
+        margin-top: 0.8vw;
+        height:0.5vw;
+    }
+    header .searchBar input:nth-of-type(1){
+        width: 19vw;
+        height: 1vw;
+        position: absolute;
+        font-size:1vw;
+    }
+
+    header .searchBar input:nth-of-type(2){
+        position: absolute;
+        width: 1.3vw;
+        height: 1.3vw;
+        top:0.2vw;
+        right: 31.5vw;
+    }
+
+    header .userMenu
+    {
+        grid-column-start: 5;
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        position: relative;
+        margin-top:1vw;
+    }
+
+    header .userMenu .userName
+    {
+        color: #300653;
+        font-size: 1.2vw;
+        font-weight: normal;
+
+    }
+
+    header .userMenu .arrow .hoverbtn
+    {
+        color: #050207;
+        font-size: 1.2vw;
+        transform: rotate(180deg);
+        border: none;
+    }
+
+    header .userMenu .arrow
+    {
+        position: relative;
+        margin-left: 0.3vw;
+        top:-0.25vw;
+    }
+
+}
+
+@media only screen and (max-width:550px)
+{
+    header
+    {
+        position: sticky;
+        z-index: 3;
+        top: 0;
+        left: 0;
+        display: grid;
+        grid-template-columns: 7% 15% 7% 51% 20%;
+        height: 3.5vw;
+        justify-content: space-around;
+        background-image: linear-gradient( rgb(210, 197, 241), rgb(48, 22, 110));
+        box-shadow: 0em 0.3em 0.7em 0em #2b0047;
+    }
+
+    header .searchBar{
+        position:relative;
+        margin-top: 0.8vw;
+        height:0.5vw;
+    }
+    header .searchBar input:nth-of-type(1){
+        width: 19vw;
+        height: 0.7vw;
+        position: absolute;
+        font-size:1vw;
+    }
+
+    header .searchBar input:nth-of-type(2){
+        position: absolute;
+        width: 1.3vw;
+        height: 1.3vw;
+        top:0.2vw;
+        right: 31.3vw;
+    }
+
+}
+
+@media only screen and (max-width:400px)
+{
+    header
+    {
+        position: sticky;
+        z-index: 3;
+        top: 0;
+        left: 0;
+        display: grid;
+        grid-template-columns: 7% 15% 7% 51% 20%;
+        height: 3.5vw;
+        justify-content: space-around;
+        background-image: linear-gradient( rgb(210, 197, 241), rgb(48, 22, 110));
+        box-shadow: 0em 0.3em 0.7em 0em #2b0047;
+    }
+
+    header .searchBar{
+        position:relative;
+        margin-top: 0.65vw;
+        height:0.5vw;
+    }
+    header .searchBar input:nth-of-type(1){
+        width: 20vw;
+        height: 0.5vw;
+        position: absolute;
+        font-size:1vw;
+    }
+
+    header .searchBar input:nth-of-type(2){
+        position: absolute;
+        width: 1.3vw;
+        height: 1.3vw;
+        top:0.3vw;
+        right: 30vw;
+    }
+
+}
+
+body
+{
+    margin: 0px;
+
+}
+body .profile{
+    background-image: url("casey-horner-339855-unsplash.jpg");
+    background-size: 100% 100%;
+    position: relative;
+    background-position: top;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    margin-bottom:auto;
+
+
+}
+.bloc-principal{
+    background-color:#8d44ada8;
+    background-size: 80%;
+    margin-left:20%;
+    margin-right:20%;
+    width:60%;
+    height:3500px;
+
+}
+.bloc-principal .header-name:hover,#tableOfContents:hover,.favourite-subjects:hover,.my-experience:hover,.my-description:hover,.my-studies:hover,.my-contact:hover, .bloc-principal #button:hover{
+    background-color:#f1c40f79;
+    border-style:solid;
+    border-color: #3498db;
+    border-radius: 10%;
+}
+.bloc-principal .header-name{
+    transition:1s;
+    padding:0px;
+    background-color:#7096bb;
+    border-style:solid;
+    border-color: #bdc3c7;
+    border-radius: 10%;
+    background-size: 80%;
+    position: relative;
+    height: 10vw;
+    margin-left:1%;
+    top:0.3%;
+    margin-bottom: 1%;
+    margin-right:1%;
+    /* box-shadow: 5px,10px; */
+}
+.header-name #name
+{
+
+    position:absolute;
+    top:15%;
+    left:30%;
+    width:100%;
+    height:40%;
+    font-family: Papyrus, fantasy;
+    font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px;
+    font-size: 2.5vw;
+
+    /*font-weight:900;
+    line-height: 26.4px;
+    text-shadow: 200px,200px,200px,200px blue;*/
+}
+.header-name #name + #facultate{
+
+    position: absolute;
+    color: #ecf0f1;
+    top:38%;
+    left:35%;
+
+    font-family:  "Hoefler Text", "Baskerville Old Face", Garamond, "Times New Roman", serif;
+    font-size: 1.3vw;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 700;
+    line-height: 15.4px;
+    /*font-weight: 200;*/
+}
+
+.header-name #name ~ #ultimaMedie{
+
+
+    text-decoration: none;
+    position: absolute;
+    color: #ecf0f1;
+    top:53%;
+    left:35%;
+
+    font-size: 1.3vw ;
+    font-family: "Hoefler Text", "Baskerville Old Face", Garamond, "Times New Roman", serif;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 700;
+    line-height: 15.4px;
+
+}
+
+.bloc-principal .header-name +.content{
+    position: relative;
+    left:auto;
+    right:auto;
+    top:1%;
+    display:grid;
+    left:4%;
+    grid-auto-columns: 60%;
+    grid-gap:3.23%;
+
+
+}
+
+#tableOfContents
+{
+    transition:0.5s;
+    position: absolute;
+    top:50%;
+    left :62%;
+    height:17vw;
+    width:15vw;
+    font-size:1.3vw;
+    background-color: #7096bb;
+    border-style:solid;
+    border-color: #bdc3c7;
+    position:fixed;
+    border-radius: 10%;
+
+}
+.my-description #titles
+{
+
+    text-align:center;
+    font-family: 'Times New Roman', Times, serif;
+}
+#tableOfContents ul{
+    font-family: "Rockwell Extra Bold", "Rockwell Bold", monospace;
+    font-style: normal; font-variant: normal;
+}
+.favourite-subjects,.my-experience,.my-description,.my-studies,.my-contact
+{
+
+    text-align: left;
+    font-size:1vw;
+    padding-right:5%;
+    transition:0.5s;
+    background-color: #7096bb;
+    border-style:solid;
+    border-color: #bdc3c7;
+    border-radius: 10%;
+}
+ul,dl,ol,#shortDescription,#study
+{
+   text-align: left;
+    font-family: "Rockwell Extra Bold", "Rockwell Bold", monospace;
+    font-style: normal; font-variant: normal;
+    font-weight: 600;
+}
+
+.bloc-principal #button{
+
+    transition:0.5s;
+    position:absolute;
+    border-style:solid;
+    border-color:  #bdc3c7;
+    background-color:#7096bb;
+    border-radius:20%;
+    position:absolute;
+    font-family: "Rockwell Extra Bold", "Rockwell Bold", monospace;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 600;
+    font-size:1.0vw;
+    top:6%;
+    left:65%;
+    padding:2%;
+
+}
+@media only screen and (max-width:1000px)
+{
+    .bloc-principal #button{
+        border-style:solid;
+        border-color: #9b59b6;
+        border-radius:20%;
+        background-color: #95a5a6;
+        position:absolute;
+        font-family: "Rockwell Extra Bold", "Rockwell Bold", monospace;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: 600;
+        font-size:1.0vw;
+        top:5%;
+        left:65%;
+        padding:2%;
+
+    }
+}
+@media only screen and (min-width:1900px)
+{
+    .header-name #name + #facultate{
+        position: absolute;
+        color: #ecf0f1;
+        top:58%;
+    }
+    .header-name #name ~ #ultimaMedie{
+        text-decoration: none;
+        position: absolute;
+        color: #ecf0f1;
+        top:80%;
+        left:35%;
+    }
+}
+
+@media only screen and (max-width:700px) {
+
+    .bloc-principal .header-name{
+        transition:1s;
+        padding:0px;
+        background-color:#7096bb;
+        border-style:solid;
+        border-color: #bdc3c7;
+        border-radius: 10%;
+        background-size: 80%;
+        position: relative;
+        height: 15vw;
+        margin-left:1%;
+        top:0.3%;
+        margin-bottom: 1%;
+        margin-right:1%;
+        /* box-shadow: 5px,10px; */
+    }
+    .bloc-principal #button{
+        border-style:solid;
+        border-color: #9b59b6;
+        background-color: #95a5a6;
+        border-radius:20%;
+        position:absolute;
+        font-family: "Rockwell Extra Bold", "Rockwell Bold", monospace;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: 600;
+        font-size:1.0vw;
+        height:0.0000004vw;
+        top:5%;
+        left:62%;
+        padding:2%;
+
+    }
+    .main {
+        width: 80%;
+        padding: 0;
+    }
+    #profilePicture{
+        width:20%;
+    }
+    .header-name #linkInsta,#linkTwitter,#linkFacebook{
+        width:5%;
+        height:10%;
+    }
+    .header-name #name{
+        width:100%;
+    }
+    #ultimaMedie{
+        width:100%;
+    }
+    #facultate{
+        width:100%;
+    }
+    .right {
+        width: 100%;
+    }
+}
+@media only screen and (max-width:500px) {
+    body{
+
+    }
+    .favourite-subjects,.my-experience,.my-description,.my-studies,.my-contact
+    {
+        font-size:1vw;
+    }
+    .bloc-principal #button{
+        position:absolute;
+        border-style:solid;
+        border-color: #9b59b6;
+        background-color: #95a5a6;
+        border-radius:20%;
+        font-family: "Rockwell Extra Bold", "Rockwell Bold", monospace;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: 600;
+        font-size:1.0vw;
+        text-align: center;
+        top:2.55%;
+        height:0.2vw;
+        width:20vw;
+        left:28%;
+        padding:2%;
+
+    }
+    .main {
+        width: 80%;
+        padding: 0;
+    }
+    #tableOfContents{
+        display:none;
+    }
+    .bloc-principal .header-name{
+        height:2%;
+    }
+    #profilePicture{
+        width:20%;
+
+    }
+    .header-name #linkInsta,#linkTwitter,#linkFacebook{
+        width:5%;
+        height:10%;
+
+    }
+    .header-name #name{
+        width:100%;
+        left:35%;
+    }
+    #ultimaMedie{
+        width:100%;
+    }
+    #facultate{
+        width:100%;
+    }
+    .right {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width:500px) {
+    ul{
+        left:0%;
+    }
+}
