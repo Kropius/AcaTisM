@@ -48,7 +48,10 @@ class MessagesProfs_Model extends Model{
         $messages = array();
         $idProf = Session::get('idUser');
 
-        $statement = $this->db->prepare("SELECT * FROM messages where id_teacher='$idProf' and id_sender!='$idProf'");
+        $statement = $this->db->prepare("SELECT * FROM messages m 
+                                                    JOIN students s on m.id_student=s.id
+                                                    JOIN teachers t on m.id_teacher=t.id
+                                                    where m.id_teacher=$idProf");
         $statement->execute();
         $result = $statement->fetchAll();
 

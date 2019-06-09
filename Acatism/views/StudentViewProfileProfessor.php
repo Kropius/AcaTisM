@@ -28,6 +28,7 @@
             <div class="hoverContent">
                 <a href="/Acatism/StudentViewProfileStudent/execute" target="_blank">My Profile</a>
                 <a href="../ViewRepo(Stud)/student.html">My Thesis</a>
+                <a href="/Acatism/messagesStuds/seeData">Messages</a>
                 <a href="../LoginPage/login.html">Logout</a>
             </div>
         </div>

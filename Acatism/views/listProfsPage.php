@@ -1,37 +1,38 @@
 <!DOCTYPE html>
-<html lang = "en-US">
+<html lang="en">
 <head>
-    <meta charset = "utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1,height=device-height">
-    <meta name="author" content="Halauca Andrei">
-    <meta name = "description" content = "Edit profile page for the professors. They will be redirected to this page in case they want to modify their profile pages.">
-    <title>Messages Profs</title>
+    <meta charset="utf-8">
+    <title>Messages Studs</title>
+
     <link rel = "shortcut icon" href = "/AcaTisM/views/images/wildcat.ico" type = "image/x-icon">
-    <link rel = "stylesheet" href = "/AcaTisM/views/stylesheets/listProfsPage.css">
+    <link rel="stylesheet" media="screen" href="/AcaTisM/views/stylesheets/listProfsPage.css">
+
+    <meta name="author" content="Halauca Andrei">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Edit profile page for the students. They will be redirected to this page in case they want to modify their profile pages.">
 </head>
 <body>
-<header>
+<header role="banner">
     <div class="titleLogo">
-        <a href="../ProfsHomePage/Profesori.html"><div id="title"><b>TEACHER</b></div></a>
-        <a href="../ProfsHomePage/Profesori.html"><img src="/AcaTisM/views/images/wildcats.png" id="logo"></a>
+        <a href="../proiect/student.html"><h1 id="title">STUDENT</h1></a>
+        <a href="../proiect/student.html"><img src="/AcaTisM/views/images/wildcat.png" id="logo"></a>
         <div class="vertical"></div>
     </div>
     <div class="searchBar">
-        <input type="image" src="/AcaTisM/views/images/magnifier.png" alt="Submit" class="searchPhoto">
-        <input type="text" size=35 class="textSearch" placeholder="Search...">
+        <input type="text" size=35 placeholder="Search..." >
+        <input type="image" src="/AcaTisM/views/images/magnifier.png" alt="Submit">
     </div>
     <div class="userMenu">
         <div class="userName">
             <?php
-//            $username = Session::get('username');
-//            echo $username;
-            //TODO:get username from session
+            echo Session::get('username');
             ?>
         </div>
         <div class="arrow">
             <div class="hoverbtn">^</div>
             <div class="hoverContent">
-                <a href="../ProfilePagePROFS(prof)/Profesori.html" target="_blank">My Profile</a>
+                <a href="../StudentProfilePage(stud)/student.html" target="_blank">My Profile</a>
+                <a href="/Acatism/messagesStuds/seeData">Messages</a>
                 <a href="../LoginPage/login.html">Logout</a>
             </div>
         </div>

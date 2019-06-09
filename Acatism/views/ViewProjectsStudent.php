@@ -29,8 +29,8 @@
             <div class="hoverbtn">^</div>
             <div class="hoverContent">
                 <a href="\Acatism\StudentViewProfileStudent\execute" target="_blank">My Profile</a>
-                <a href="\Acatism\MyThesis\execute">My
-                    Thesis</a>
+                <a href="\Acatism\MyThesis\execute">My Thesis</a>
+                <a href="/Acatism/messagesStuds/seeData">Messages</a>
                 <a href="../../../../Users/Mihnea/Desktop/Final/AcaTisM-master/LoginPage/login.html">Logout</a>
 
             </div>

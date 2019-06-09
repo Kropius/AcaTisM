@@ -9,7 +9,6 @@ class ViewProjects_Model extends Model
 
     public function getData()
     {
-        //see the id from the session in order to get from concepts
         $myId = Session::get('idUser');
         $data = null;
         $i = 0;

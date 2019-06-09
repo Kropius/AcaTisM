@@ -10,21 +10,44 @@ class EditProject extends Controller
     public function edit($project)
     {
         Session::init();
-        $this->view->setData($this->model->getPastData($project));
-        $this->view->render('editProject_view');
+        $data = $this->model->getPastData($project);
+        if($data == -1) {
+            $this->view->setData(-1);
+            $this->view->render('manageErrors_view');
+        }
+        else {
+            $this->view->setData($data);
+            $this->view->render('editProject_view');
+        }
     }
 
     public function delete($project)
     {
-        $this->model->delete($project);
-        header('Location: /Acatism/viewProjects/seeData');
-        die();
+        Session::init();
+        $data = $this->model->delete($project);
+        if($data == -1)
+        {
+            $this->view->setData(-1);
+            $this->view->render('manageErrors_view');
+        }
+        else {
+            header('Location: /Acatism/viewProjects/seeData');
+            die();
+        }
     }
 
     public function execute($project)
     {
-        $this->model->execute($project);
-        header('Location: /Acatism/viewProjects/seeData');
-        die();
+        Session::init();
+        $data = $this->model->execute($project);
+        if($data == -1)
+        {
+            $this->view->setData($data);
+            $this->view->render('manageErrors_view');
+        }
+        else {
+            header('Location: /Acatism/viewProjects/seeData');
+            die();
+        }
     }
 }

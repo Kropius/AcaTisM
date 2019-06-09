@@ -8,7 +8,13 @@ class AddProject_Model extends Model
     }
     public function execute()
     {
-        //see the id from the session in order to insert into concepts
+        $countProj = $this->db->prepare("select count(id) as nr from concepts where id_teacher = :tid");
+        $countProj->execute(array(
+           ':tid' => Session::get('idUser')
+        ));
+        $rez = $countProj->fetch();
+        if($rez['nr'] >= 12)
+            return -4;
         $getId = $this->db->query("Select max(id) from projects");
         $getDomain = $this->db->prepare("select d.id from domains d where d.name = :thisname;");
         $result = $getId->fetch();
@@ -133,6 +139,11 @@ class AddProject_Model extends Model
                     ':id_dom' => $domain3['id'],
                     ':id_proj' => $idProj
                 ));
+            return 1;
+        }
+        else
+        {
+            return -3;
         }
     }
 }

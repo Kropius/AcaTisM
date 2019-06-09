@@ -15,8 +15,15 @@ class AddProject extends Controller
     public function execute()
     {
         Session::init();
-        $this->model->execute();
-        header('Location: /Acatism/viewProjects/seeData');
-        die();
+        $data = $this->model->execute();
+        if($data == -3 || $data == -4)
+        {
+            $this->view->setData($data);
+            $this->view->render('manageErrors_view');
+        }
+        else {
+            header('Location: /Acatism/viewProjects/seeData');
+            die();
+        }
     }
 }

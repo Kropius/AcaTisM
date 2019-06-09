@@ -28,7 +28,15 @@ class ViewStudents_Model extends Model
 
     public function deleteStudent($student, $project)
     {
-        $myId = Session::get('idUser'); //id preluat din sesiune
+        $myId = Session::get('idUser');
+        $exists = $this->db->prepare("select count(id) as nr from concepts where id_project = :pid and id_teacher = :tid");
+        $exists->execute(array(
+            ':pid' => $project,
+            'tid' => $myId
+        ));
+        $ex = $exists->fetch();
+        if($ex['nr'] == 0)
+            return -2;
         $count = $this->db->prepare("select count(id) as nr from collaborations where id_student = :stud and id_teacher = :prof");
         $count->execute(array(
             ':prof' => $myId,

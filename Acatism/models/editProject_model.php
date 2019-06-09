@@ -9,7 +9,15 @@ class EditProject_Model extends Model
 
     public function getPastData($project)
     {
-        //see the id from the session in order to get from concepts
+        $myId = Session::get('idUser');
+        $exists = $this->db->prepare("select count(id) as nr from concepts where id_project = :pid and id_teacher = :tid");
+        $exists->execute(array(
+            ':pid' => $project,
+            'tid' => $myId
+        ));
+        $count = $exists->fetch();
+        if($count['nr'] == 0)
+            return -1;
         $data = null;
         $getProject = $this->db->prepare("SELECT p.id, p.name, p.short_description, p.long_description FROM projects p 
             where p.id = :id");
@@ -49,6 +57,15 @@ class EditProject_Model extends Model
 
     public function delete($project)
     {
+        $myId = Session::get('idUser');
+        $exists = $this->db->prepare("select count(id) as nr from concepts where id_project = :pid and id_teacher = :tid");
+        $exists->execute(array(
+            ':pid' => $project,
+            'tid' => $myId
+        ));
+        $count = $exists->fetch();
+        if($count['nr'] == 0)
+            return -1;
         $getEmails = $this->db->prepare("select s.email from students s join theses th on s.id = th.id_student where th.id_project = :pid");
         $getEmails->execute(array(
             ':pid' => $project
@@ -73,11 +90,20 @@ class EditProject_Model extends Model
         $deleteProject->execute(array(
            ':pid' => $project
         ));
+        return 1;
     }
 
     public function execute($project)
     {
-        //see the id from the session in order to insert into concepts
+        $myId = Session::get('idUser');
+        $exists = $this->db->prepare("select count(id) as nr from concepts where id_project = :pid and id_teacher = :tid");
+        $exists->execute(array(
+            ':pid' => $project,
+            'tid' => $myId
+        ));
+        $count = $exists->fetch();
+        if($count['nr'] == 0)
+            return -1;
         $getEmails = $this->db->prepare("select s.email from students s join theses th on s.id = th.id_student where th.id_project = :pid");
         $getEmails->execute(array(
             ':pid' => $project
@@ -94,7 +120,6 @@ class EditProject_Model extends Model
             }
         }
         $getDomain = $this->db->prepare("select d.id from domains d where d.name = :thisname");
-
         $name = $_POST['name'];
         $short = $_POST['short'];
         $long = $_POST['task'];
@@ -229,5 +254,6 @@ class EditProject_Model extends Model
             $updateSubject->execute(array(
                 ':id_dom' => $domain3['id'],
                 ':pid' => $project));
+        return 1;
     }
 }

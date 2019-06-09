@@ -28,6 +28,7 @@
             <div class="hoverbtn">^</div>
             <div class="hoverContent">
                 <a href="../ProfilePagePROFS(prof)/Profesori.html" target="_blank">My Profile</a>
+                <a href="/Acatism/messagesStuds/seeData">Messages</a>
                 <a href="../LoginPage/login.html">Logout</a>
             </div>
         </div>

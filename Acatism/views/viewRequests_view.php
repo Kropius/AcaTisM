@@ -26,6 +26,7 @@
             <div class="hoverbtn">^</div>
             <div class="hoverContent">
                 <a href="/Acatism/ProfessorViewProfileProfessor/execute" target="_blank">My Profile</a>
+                <a href="/Acatism/messagesStuds/seeData">Messages</a>
                 <a href="../LoginPage/login.html">Logout</a>
             </div>
         </div>
@@ -37,6 +38,7 @@
             <a href = "/Acatism/viewStudents/seeData">Go Back</a>
         </div>
         <?php
+            $i = 0;
             if($this->info != null)
                 foreach($this->info as $request)
                 {
@@ -48,6 +50,9 @@
                     echo '<h3 class = "view"><a href = "/Acatism/viewRequests/acceptStudent/'.$request['s_id'].'/'.$request['p_id'].'">Accept</a></h3>';
                     echo '<h3 class = "view"><a href = "/Acatism/viewRequests/declineStudent/'.$request['s_id'].'/'.$request['p_id'].'">Decline</a></h3>';
                     echo '</article>';
+                    $i++;
+                    if($i == 12)
+                        break;
                 }
         ?>
     </div>

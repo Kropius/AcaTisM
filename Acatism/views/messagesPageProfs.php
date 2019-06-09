@@ -12,8 +12,8 @@
 <body>
 <header>
     <div class="titleLogo">
-        <a href="../ProfsHomePage/Profesori.html"><div id="title"><b>TEACHER</b></div></a>
-        <a href="../ProfsHomePage/Profesori.html"><img src="/AcaTisM/views/images/wildcats.png" id="logo"></a>
+        <a href="/Acatism/homePage"><div id="title"><b>TEACHER</b></div></a>
+        <a href="/Acatism/homePage"><img src="/AcaTisM/views/images/wildcats.png" id="logo"></a>
         <div class="vertical"></div>
     </div>
     <div class="searchBar">
@@ -23,14 +23,14 @@
     <div class="userMenu">
         <div class="userName">
             <?php
-            $username = Session::get('username');
-            echo $username;
+            echo Session::get('username');
             ?>
         </div>
         <div class="arrow">
             <div class="hoverbtn">^</div>
             <div class="hoverContent">
                 <a href="../ProfilePagePROFS(prof)/Profesori.html" target="_blank">My Profile</a>
+                <a href="/Acatism/messagesStuds/seeData">Messages</a>
                 <a href="../LoginPage/login.html">Logout</a>
             </div>
         </div>
