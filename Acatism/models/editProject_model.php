@@ -240,6 +240,10 @@ class EditProject_Model extends Model
         }
         $updateSubject = $this->db->prepare("INSERT INTO subjects (id, id_domain, id_project) values 
                 (NULL, :id_dom, :pid)");
+        if($domain1['id'] == $domain2['id'] || $domain2['id'] == $domain3['id'])
+            $domain2 = null;
+        if($domain1['id'] == $domain3['id'])
+            $domain3 = null;
         if($domain1!=null)
             $updateSubject->execute(array(
                 ':id_dom' => $domain1['id'],

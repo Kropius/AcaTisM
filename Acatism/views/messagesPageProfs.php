@@ -16,10 +16,6 @@
         <a href="/Acatism/homePage"><img src="/AcaTisM/views/images/wildcats.png" id="logo"></a>
         <div class="vertical"></div>
     </div>
-    <div class="searchBar">
-        <input type="image" src="/AcaTisM/views/images/magnifier.png" alt="Submit" class="searchPhoto">
-        <input type="text" size=35 class="textSearch" placeholder="Search...">
-    </div>
     <div class="userMenu">
         <div class="userName">
             <?php
@@ -29,9 +25,9 @@
         <div class="arrow">
             <div class="hoverbtn">^</div>
             <div class="hoverContent">
-                <a href="../ProfilePagePROFS(prof)/Profesori.html" target="_blank">My Profile</a>
+                <a href="/Acatism/ProfessorViewProfileProfessor/execute">My Profile</a>
                 <a href="/Acatism/messagesStuds/seeData">Messages</a>
-                <a href="../LoginPage/login.html">Logout</a>
+                <a href="/Acatism/login/logout">Logout</a>
             </div>
         </div>
     </div>
@@ -68,7 +64,7 @@
             $i=1;
             foreach ($this->messages as $item){
                 echo "<tr>";
-                echo "<td>".($i++)."</td><td>".$item['id_sender']."</td><td>".$item['content']."</td>";
+                echo "<td>".($i++)."</td><td>".$item['id_student']."</td><td>".$item['content']."</td>";
                 echo "</tr>";
             }
             ?>

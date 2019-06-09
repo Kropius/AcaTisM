@@ -10,7 +10,7 @@
 <body>
 <div class="login_box">
     <h1><a href=""></a>Login</h1>
-    <form action="login/run" method="post">
+    <form action="/Acatism/login/run" method="post">
         <input type="text" name="username" placeholder="Username">
         <input type="password" name="password" placeholder="Password">
         <select name="type">

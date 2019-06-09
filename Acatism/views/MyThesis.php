@@ -27,10 +27,10 @@
         <div class="arrow">
             <div class="hoverbtn">^</div>
             <div class="hoverContent">
-                <a href="\Acatism\StudentViewProfileStudent\execute" target="_blank">My Profile</a>
+                <a href="\Acatism\StudentViewProfileStudent\execute">My Profile</a>
                 <a href="\Acatism\MyThesis\execute">My Thesis</a>
                 <a href="/Acatism/messagesStuds/seeData">Messages</a>
-                <a href="../LoginPage/login.html">Logout</a>
+                <a href="/Acatism/login/logout">Logout</a>
             </div>
         </div>
     </div>
@@ -54,7 +54,7 @@
                 <?php
 
                 if ($this->oldinfo==null) {
-                    echo 'Felicitari! Se pare ca v-ati terminat lucrarea de licenta!!';
+                    echo 'Nici o informatie disponibila!!!';
                 } else {
                     echo "<div class=minititle >Cerintele pentru deadline-ul curent:" . "</div>";
                     echo "<div class=minititle >Descrierea deadline-ulu: </div>" . $this->oldinfo['description'] . "<br>";

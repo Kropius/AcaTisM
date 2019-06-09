@@ -14,8 +14,8 @@
 <body>
 <header role="banner">
     <div class="titleLogo">
-        <a href="../proiect/student.html"><h1 id="title">STUDENT</h1></a>
-        <a href="../proiect/student.html"><img src="/AcaTisM/views/images/wildcat.png" id="logo"></a>
+        <a href="/Acatism/StudentHomePage"><h1 id="title">STUDENT</h1></a>
+        <a href="/Acatism/StudentHomePage"><img src="/AcaTisM/views/images/wildcat.png" id="logo"></a>
         <div class="vertical"></div>
     </div>
     <div class="searchBar">
@@ -31,9 +31,10 @@
         <div class="arrow">
             <div class="hoverbtn">^</div>
             <div class="hoverContent">
-                <a href="../StudentProfilePage(stud)/student.html" target="_blank">My Profile</a>
+                <a href="/Acatism/StudentViewProfileStudent/execute">My Profile</a>
+                <a href="/Acatism/MyThesis/execute">My Thesis</a>
                 <a href="/Acatism/messagesStuds/seeData">Messages</a>
-                <a href="../LoginPage/login.html">Logout</a>
+                <a href="/Acatism/login/logout">Logout</a>
             </div>
         </div>
     </div>
