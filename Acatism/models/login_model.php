@@ -6,8 +6,6 @@ class Login_Model extends Model {
     }
 
     public function run(){
-        Session::init();
-
         $userType = $_POST['type'];
         if ($userType!="-1"){
             $sth = $this->db->prepare("SELECT id from $userType 
@@ -62,6 +60,9 @@ class Login_Model extends Model {
         else{
             header('location:../login');
         }
+    }
 
+    public function logout(){
+        Session::destroy();
     }
 }

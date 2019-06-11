@@ -8,7 +8,7 @@ class Commit_model extends Model
     }
     function commit()
     {
-        $myid=7;
+        $myid=Session::get('idUser');
         $descriere=null;
         if(isset($_POST['descriere']))
             $descriere=$_POST['descriere'];
@@ -17,7 +17,11 @@ class Commit_model extends Model
         if(isset($_POST['format']))
             $format=$_POST['format'];
 
-        $ded = $this->db->query("select count(commits.id_deadline) from students left join commits on students.id=commits.id_student left join deadlines on deadlines.id=commits.id_deadline where students.id=$myid");
+        $ded = $this->db->query("select count(commits.id_deadline) from students 
+                                            left join commits on students.id=commits.id_student 
+                                            left join deadlines on deadlines.id=commits.id_deadline 
+                                            where students.id=$myid");
+
         $this->current_Deadline = $ded->fetch();
         $nextDeadline = $this->current_Deadline['count(commits.id_deadline)'];
         /////am aflat cate deadline-uri am indeplinit pana acum

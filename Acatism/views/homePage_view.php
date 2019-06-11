@@ -25,8 +25,9 @@
         <div class="arrow">
             <div class="hoverbtn">^</div>
             <div class="hoverContent">
-                <a href="/Acatism/ProfessorViewProfileProfessor/execute" target="_blank">My Profile</a>
-                <a href="../LoginPage/login.html">Logout</a>
+                <a href="/Acatism/ProfessorViewProfileProfessor/execute">My Profile</a>
+                <a href="/Acatism/messagesProfs/seeData">Messages</a>
+                <a href="/Acatism/login/logout">Logout</a>
             </div>
         </div>
     </div>

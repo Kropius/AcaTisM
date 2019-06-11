@@ -30,9 +30,10 @@
         <div class="arrow">
             <div class="hoverbtn">^</div>
             <div class="hoverContent">
-                <a href="/Acatism/StudentViewProfileStudent/execute" target="_blank">My Profile</a>
+                <a href="/Acatism/StudentViewProfileStudent/execute">My Profile</a>
                 <a href="/Acatism/MyThesis/execute">My Thesis</a>
-                <a href="../LoginPage/login.html">Logout</a>
+                <a href="/Acatism/messagesStuds/seeData">Messages</a>
+                <a href="/Acatism/login/logout">Logout</a>
             </div>
         </div>
     </div>

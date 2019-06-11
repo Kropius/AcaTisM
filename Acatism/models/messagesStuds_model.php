@@ -39,7 +39,7 @@ class MessagesStuds_Model extends Model{
         $curDate = date("Y-m-d H:i:s");
 
         $stmt = $this->db->prepare("INSERT into messages(id_teacher,id_student,content,id_sender,sent_date) VALUES (?,?,?,?,?)");
-        $stmt->execute([$idProf,$idStud,$message,$idStud,$curDate]);
+        $stmt->execute([$idProf,$idStud,$message,'s',$curDate]);
     }
 
     public function getMessages()
@@ -47,7 +47,10 @@ class MessagesStuds_Model extends Model{
         $messages = array();
         $idStud = Session::get('idUser');
 
-        $statement = $this->db->prepare("SELECT * FROM messages where id_student='$idStud' and id_sender!='$idStud'");
+        $statement = $this->db->prepare("SELECT * FROM messages m
+                                                    JOIN students s on m.id_student=s.id
+                                                    JOIN teachers t on m.id_teacher=t.id
+                                                    where m.id_student='$idStud' and m.id_sender='t'");
         $statement->execute();
         $result = $statement->fetchAll();
 
@@ -57,7 +60,7 @@ class MessagesStuds_Model extends Model{
 
         $messagesFinal= array();
         foreach ($messages as $message){
-            $message['id_sender'] = $this->getNameFromId($message['id_sender']);
+            $message['id_teacher'] = $this->getNameFromId($message['id_teacher']);
             $messagesFinal[] = $message;
         }
         return $messagesFinal;

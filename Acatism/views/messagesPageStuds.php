@@ -14,13 +14,9 @@
 <body>
 <header role="banner">
     <div class="titleLogo">
-        <a href="../proiect/student.html"><h1 id="title">STUDENT</h1></a>
-        <a href="../proiect/student.html"><img src="/AcaTisM/views/images/wildcat.png" id="logo"></a>
+        <a href="/Acatism/StudentHomePage"><h1 id="title">STUDENT</h1></a>
+        <a href="/Acatism/StudentHomePage"><img src="/AcaTisM/views/images/wildcat.png" id="logo"></a>
         <div class="vertical"></div>
-    </div>
-    <div class="searchBar">
-        <input type="text" size=35 placeholder="Search..." >
-        <input type="image" src="/AcaTisM/views/images/magnifier.png" alt="Submit">
     </div>
     <div class="userMenu">
         <div class="userName">
@@ -32,8 +28,10 @@
         <div class="arrow">
             <div class="hoverbtn">^</div>
             <div class="hoverContent">
-                <a href="../StudentProfilePage(stud)/student.html" target="_blank">My Profile</a>
-                <a href="../LoginPage/login.html">Logout</a>
+                <a href="/Acatism/StudentViewProfileStudent/execute">My Profile</a>
+                <a href="\Acatism\MyThesis\execute">My Thesis</a>
+                <a href="/Acatism/messagesStuds/seeData">Messages</a>
+                <a href="/Acatism/login/logout">Logout</a>
             </div>
         </div>
     </div>
@@ -70,7 +68,7 @@
             $i=1;
             foreach ($this->messages as $item){
                 echo "<tr>";
-                echo "<td>".($i++)."</td><td>".$item['id_sender']."</td><td>".$item['content']."</td>";
+                echo "<td>".($i++)."</td><td>".$item['id_teacher']."</td><td>".$item['content']."</td>";
                 echo "</tr>";
             }
             ?>

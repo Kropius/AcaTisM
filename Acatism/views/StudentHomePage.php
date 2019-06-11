@@ -26,9 +26,10 @@
             <div class="arrow"> 
                 <div class="hoverbtn">^</div>
                 <div class="hoverContent">
-                    <a href="\Acatism\StudentViewProfileStudent\execute" target="_blank">My Profile</a>
+                    <a href="/Acatism/StudentViewProfileStudent/execute">My Profile</a>
                     <a href="/Acatism/MyThesis/execute">My Thesis</a>
-                    <a href="../../../../Desktop/AcaTisM-master/Final/AcaTisM-master/LoginPage/login.html">Logout</a>
+                    <a href="/Acatism/messagesStuds/seeData">Messages</a>
+                    <a href="/Acatism/login/logout">Logout</a>
                 </div>
             </div> 
         </div> 
@@ -37,12 +38,12 @@
         <div class="menu">
             
             <div id="projects"><h1><a href="/Acatism/ViewProjectsStudent/execute">PROJECTS</a></h1></div>
-            <div id="professors"><h1><a href="../../../../Desktop/AcaTisM-master/Final/AcaTisM-master/TeachersStudPage/teachersStudPage.html">PROFESSORS</a></h1></div>
-            <div id="news"><h1><a href="../../../../Desktop/AcaTisM-master/Final/AcaTisM-master/proiect/News.html" >NEWS</a></h1></div>
-            <div id="tips"><h1><a href="../../../../Desktop/AcaTisM-master/Final/AcaTisM-master/proiect/Tips.html">TIPS AND TRICKS</a></h1></div>
-            <div id="newProjects"><h1><a href="../../../../Desktop/AcaTisM-master/Final/AcaTisM-master/proiect/TheLastProjects.html">THE LATEST PROJECTS</a></h1></div>
-            <div id="apps"><h1><a href="../../../../Desktop/AcaTisM-master/Final/AcaTisM-master/UsefulAppsStudents/usefulApps.html">APPS TO USE</a></h1></div>
-            
+            <div id="professors"><h1><a href="/Acatism/listProfs/seeData">PROFESSORS</a></h1></div>
+            <div id="news"><h1><a href="/Acatism/news/seeData" >NEWS</a></h1></div>
+            <div id="tips"><h1><a href="/Acatism/tips/seeData">TIPS AND TRICKS</a></h1></div>
+            <div id="newProjects"><h1><a href="/Acatism/TheLastProjects/seeData">THE LATEST PROJECTS</a></h1></div>
+            <div id="apps"><h1><a href="/Acatism/usefulApps/seeData">APPS TO USE</a></h1></div>
+
         </div>
     </main>
 </body>

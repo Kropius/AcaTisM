@@ -74,10 +74,11 @@ class ApplyProject_model extends Model{
         for($i=1;$i<=14;$i++)
         {
             if(isset($ppref_fr[$i])) {
-                if ($ppref_fr[$i] == 2)
+                if ($ppref_fr[$i] >= 2)
                     $match++;
             }
         }
+
         if($match>=2) $this->applied=1;
         else if($this->applied!=1) $this->applied=-1;
         if($this->applied==1)
