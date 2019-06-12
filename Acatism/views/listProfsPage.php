@@ -15,12 +15,8 @@
 <header role="banner">
     <div class="titleLogo">
         <a href="/Acatism/StudentHomePage"><h1 id="title">STUDENT</h1></a>
-        <a href="/Acatism/StudentHomePage"><img src="/AcaTisM/views/images/wildcat.png" id="logo"></a>
+        <a href="/Acatism/StudentHomePage"><img src="/AcaTisM/views/images/wildcat.png" id="logo" alt = "LOGO"></a>
         <div class="vertical"></div>
-    </div>
-    <div class="searchBar">
-        <input type="text" size=35 placeholder="Search..." >
-        <input type="image" src="/AcaTisM/views/images/magnifier.png" alt="Submit">
     </div>
     <div class="userMenu">
         <div class="userName">

@@ -13,7 +13,7 @@
 <header>
     <div class="titleLogo">
         <a href="/Acatism/homePage"><div id="title"><b>TEACHER</b></div></a>
-        <a href="/Acatism/homePage"><img src="/AcaTisM/views/images/wildcats.png" id="logo"></a>
+        <a href="/Acatism/homePage"><img src="/AcaTisM/views/images/wildcats.png" id="logo" alt = "LOGO"></a>
         <div class="vertical"></div>
     </div>
     <div class="userMenu">

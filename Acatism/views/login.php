@@ -18,7 +18,7 @@
             <option value="teachers">Teacher</option>
             <option value="students">Student</option>
         </select>
-        <input type="submit" name="submit" placeholder="Login">
+        <input type="submit" name="submit">
     </form>
 </div>
 <div class="about_box">
