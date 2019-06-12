@@ -19,7 +19,9 @@
 
     <div class="userMenu">
         <div class="userName">
-            Username
+            <?php
+                echo Session::get('username');
+                ?>
         </div>
         <div class="arrow">
             <div class="hoverbtn">^</div>

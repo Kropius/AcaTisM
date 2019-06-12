@@ -33,11 +33,9 @@ class Commit_model extends Model
                                where students.id=$myid
                                ORDER BY deadlines.mandatory_date LIMIT $nextDeadline,1");
         $current_Deadline=$sql->fetch();
-
-        if(strcmp($current_Deadline['extension'],$extensie)!=0&&strcmp($current_Deadline['extension'],".*")!=0)
+        if(strcmp($current_Deadline['extension'],$extensie)!=0)
         {
             $this->succes=-1;
-
             return;
         }
         if(strcmp($current_Deadline['format'],$format)!=0)
@@ -57,6 +55,24 @@ class Commit_model extends Model
         $sql= "Insert into commits (id, id_student,id_deadline,description,add_date) VALUES (?,?,?,?,?)";
         $STM=$this->db->prepare($sql);
         $STM->execute([$idInteres,$myid,$current_Deadline['id'],$descriere,date("Y/m/d")]);
+
+        $getEmail = $this->db->prepare("select t.email from teachers t join collaborations c on c.id_teacher = t.id join students s on s.id = c.id_student where s.id = :sid");
+        $getEmail->execute(array(
+            ':sid' => $myid
+        ));
+        $getSName = $this->db->prepare("select s.name from students s where s.id = :sid");
+        $getSName->execute(array(
+            ':sid' => $myid
+        ));
+        $result = $getEmail->fetch();
+        $resultName = $getSName->fetch();
+        $this->mail->Subject = "ACATISM!";
+        $this->mail->Body = $resultName['name'].' made progress on his project! Check it out! ';
+        $this->mail->AddAddress($result['email']);
+        if (!$this->mail->send()) {
+            echo 'Message could not be sent.';
+            echo 'Mailer Error: ' . $this->mail->ErrorInfo;
+        }
     }
 }
 

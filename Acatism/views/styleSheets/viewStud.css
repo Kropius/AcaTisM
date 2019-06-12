@@ -340,7 +340,7 @@ header .userMenu .arrow:hover .hoverbtn {color: grey;}
     {   
         font-family: 'Comic Sans MS', cursive, sans-serif;
         font-size: 3vw; 
-        color: #00bda4
+        color: #00bda4;
     }
 }
 
@@ -690,6 +690,8 @@ body>main .mainBody article:nth-of-type(12)
     {
         text-align: center;
         font-size: 1.8vw;
+		position: relative;
+		bottom: 1.5vw;
     }
     body>main .mainBody article .headStudent .name
     {
@@ -872,6 +874,8 @@ body>main .mainBody article:nth-of-type(12)
         font-family: Impact, Charcoal, sans-serif;
         font-weight: normal;
         font-size: 4.5vw;
+		position: relative;
+		bottom: 5vw;
     }
     body>main .mainBody .request
     {

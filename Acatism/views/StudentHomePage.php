@@ -41,7 +41,7 @@
             <div id="professors"><h1><a href="/Acatism/listProfs/seeData">PROFESSORS</a></h1></div>
             <div id="news"><h1><a href="/Acatism/news/seeData" >NEWS</a></h1></div>
             <div id="tips"><h1><a href="/Acatism/tips/seeData">TIPS AND TRICKS</a></h1></div>
-            <div id="newProjects"><h1><a href="/Acatism/TheLastProjects/seeData">THE LATEST PROJECTS</a></h1></div>
+            <div id="newProjects"><h1><a href="/Acatism/TheLastProjects/seeData">POPULAR FROM LAST YEAR</a></h1></div>
             <div id="apps"><h1><a href="/Acatism/usefulApps/seeData">APPS TO USE</a></h1></div>
 
         </div>

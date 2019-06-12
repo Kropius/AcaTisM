@@ -11,7 +11,7 @@ class MessagesProfs extends Controller{
         $logged = Session::get('loggedIn');
 
         $user = Session::get('user');
-        if ($user == "teachers") {
+        if ($user == "students") {
             Session::destroy();
             header('location: /AcaTisM/login');
         }
@@ -32,7 +32,7 @@ class MessagesProfs extends Controller{
         $logged = Session::get('loggedIn');
 
         $user = Session::get('user');
-        if ($user == "teachers") {
+        if ($user == "students") {
             Session::destroy();
             header('location: /AcaTisM/login');
         }
