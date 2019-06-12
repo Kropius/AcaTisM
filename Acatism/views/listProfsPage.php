@@ -18,10 +18,6 @@
         <a href="/Acatism/StudentHomePage"><img src="/AcaTisM/views/images/wildcat.png" id="logo" alt = "LOGO"></a>
         <div class="vertical"></div>
     </div>
-    <div class="searchBar">
-        <input type="text" size=35 placeholder="Search..." >
-        <input type="image" src="/AcaTisM/views/images/magnifier.png" alt="Submit">
-    </div>
     <div class="userMenu">
         <div class="userName">
             <?php
