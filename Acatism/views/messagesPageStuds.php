@@ -15,7 +15,7 @@
 <header role="banner">
     <div class="titleLogo">
         <a href="/Acatism/StudentHomePage"><h1 id="title">STUDENT</h1></a>
-        <a href="/Acatism/StudentHomePage"><img src="/AcaTisM/views/images/wildcat.png" id="logo"></a>
+        <a href="/Acatism/StudentHomePage"><img src="/AcaTisM/views/images/wildcat.png" id="logo" alt = "LOGO"></a>
         <div class="vertical"></div>
     </div>
     <div class="userMenu">
