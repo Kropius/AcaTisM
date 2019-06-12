@@ -26,6 +26,15 @@
     <p>
         This is the login page of the ACATISM project. This project is amazing.
     </p>
+    <p>
+        <a href="https://www.youtube.com/watch?v=DkS8HSb7c4g">VIDEO</a>
+    </p>
+    <p>
+        <a href="https://github.com/Kropius/AcaTisM">GITHUB</a>
+    </p>
+    <p>
+        <a href="/Architecture/Documentatie.html">DOCUMENTATION</a>
+    </p>
 </div>
 
 </body>

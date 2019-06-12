@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Messages Studs</title>
+    <title>Professors List</title>
 
     <link rel = "shortcut icon" href = "/AcaTisM/views/images/wildcat.ico" type = "image/x-icon">
     <link rel="stylesheet" media="screen" href="/AcaTisM/views/stylesheets/listProfsPage.css">
@@ -43,7 +43,7 @@
     <?php
     foreach ($this->profs as $prof){
         $id = $prof['id'];
-        echo "<p>".$prof['name'].', '.$prof['profession'].", Profile:"."<a href='$id'>LINK</a></p>";
+        echo "<p>".$prof['name'].', '.$prof['profession'].", Profile:"."<a href='/Acatism/StudentViewProfileProfessor/execute/$id'>LINK</a></p>";
     }
     ?>
 </main>
