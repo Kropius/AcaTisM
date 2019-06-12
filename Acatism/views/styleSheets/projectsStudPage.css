@@ -43,14 +43,13 @@ body
 
 .container .project1{
     /*display:none;*/
-    height:max-content;
+    height:56vw;
     padding: 0.5vw;
     border: 0.3vw solid black;
     border-radius: 2vw;
     background-color: #c56cf0;
     opacity: 0.9;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
     color: black;
 }
 
@@ -117,7 +116,7 @@ li{
         margin-top: 5vw;
         display: grid;
         grid-template-columns: 25vw 25vw 25vw; 
-        grid-template-rows: 40vw 30vw;
+        grid-template-rows: auto;
         grid-auto-rows: 20vw;
         grid-row-gap: 5vw;
         grid-column-gap: 5vw;
@@ -127,6 +126,17 @@ li{
         justify-content: center;
         font-size: 2vw;
         color: white;
+    }
+    .container .project1{
+        /*display:none;*/
+        height:56vw;
+        padding: 0.5vw;
+        border: 0.3vw solid black;
+        border-radius: 2vw;
+        background-color: #c56cf0;
+        opacity: 0.9;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: black;
     }
 
     .project1 p , .project2 p, .project3 p, .project4 p, .project5 p, .project6 p{
@@ -210,6 +220,17 @@ li{
         justify-content: center;
         font-size: 3vw;
         color: white;
+    }
+    .container .project1{
+        /*display:none;*/
+        height:96vw;
+        padding: 0.5vw;
+        border: 0.3vw solid black;
+        border-radius: 2vw;
+        background-color: #c56cf0;
+        opacity: 0.9;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: black;
     }
 
     .project1 p , .project2 p, .project3 p, .project4 p, .project5 p, .project6 p{

@@ -55,6 +55,8 @@
                             <option value="Information Security">Information Security</option>
                             <option value="Functional Programming">Functional Programming</option>
                             <option value="Object Oriented Programming">Object Oriented Programming</option>
+                            <option value="Natural Language Processing">Natural Language Processing</option>
+
                             <option value="Compilers">Compilers</option>
                             <option value="Optimisation Algorithms">Optimisation Algorithms</option>
                             <option value="Game Development">Game Development</option>
@@ -73,6 +75,8 @@
                             <option value="Information Security">Information Security</option>
                             <option value="Functional Programming">Functional Programming</option>
                             <option value="Object Oriented Programming">Object Oriented Programming</option>
+                            <option value="Natural Language Processing">Natural Language Processing</option>
+
                             <option value="Compilers">Compilers</option>
                             <option value="Optimisation Algorithms">Optimisation Algorithms</option>
                             <option value="Game Development">Game Development</option>
@@ -91,6 +95,8 @@
                             <option value="Information Security">Information Security</option>
                             <option value="Functional Programming">Functional Programming</option>
                             <option value="Object Oriented Programming">Object Oriented Programming</option>
+                            <option value="Natural Language Processing">Natural Language Processing</option>
+
                             <option value="Compilers">Compilers</option>
                             <option value="Optimisation Algorithms">Optimisation Algorithms</option>
                             <option value="Game Development">Game Development</option>
